@@ -20,7 +20,8 @@
   <backgrounds name="background"/>
   <paths name="paths"/>
   <scripts name="scripts">
-    <script>scripts\game_configuration.gml</script>
+    <script>scripts\enums.gml</script>
+    <script>scripts\room_configuration.gml</script>
     <scripts name="Functions">
       <script>scripts\add_hex_to_grid.gml</script>
       <script>scripts\set_object_depth.gml</script>
@@ -37,12 +38,14 @@
     </objects>
     <object>objects\game_obj</object>
     <objects name="builds">
-      <object>objects\capitol_obj</object>
+      <object>objects\capitol_P1_obj</object>
+      <object>objects\capitol_P2_obj</object>
       <object>objects\village_obj</object>
       <object>objects\stronghold_obj</object>
     </objects>
   </objects>
   <rooms name="rooms">
+    <room>rooms\econony_test</room>
     <room>rooms\map_test</room>
   </rooms>
   <help>

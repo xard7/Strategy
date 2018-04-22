@@ -10,18 +10,7 @@
   <persistent>0</persistent>
   <colour>16757606</colour>
   <showcolour>-1</showcolour>
-  <code>if(variable_global_exists("MAP_GRID") != 0)
-{
-    var mg = global.MAP_GRID;
-    
-    add_hex_to_grid(mg, map_test_hex_6, 0, 0);
-    add_hex_to_grid(mg, map_test_hex_3, 1, 0);
-    add_hex_to_grid(mg, map_test_hex_8, 2, 0);
-    add_hex_to_grid(mg, map_test_hex_10, 0, 1);
-    add_hex_to_grid(mg, map_test_hex_7, 1, 1);
-    add_hex_to_grid(mg, map_test_hex_12, 2, 1);
-    add_hex_to_grid(mg, map_test_hex_11, 1, 2);
-}</code>
+  <code></code>
   <enableViews>-1</enableViews>
   <clearViewBackground>-1</clearViewBackground>
   <clearDisplayBuffer>-1</clearDisplayBuffer>
@@ -69,7 +58,6 @@
     <instance objName="hex_grass_obj" x="340" y="234" name="map_test_hex_10" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="hex_grass_obj" x="340" y="198" name="map_test_hex_11" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="hex_grass_obj" x="272" y="180" name="map_test_hex_12" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="game_obj" x="7" y="7" name="inst_779AEB4C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="hex_sand_obj" x="204" y="270" name="inst_82DC7357" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="hex_sand_obj" x="272" y="288" name="inst_EF133B40" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="hex_sand_obj" x="340" y="306" name="inst_D736DF8F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -122,7 +110,6 @@
     <instance objName="hex_rock_obj" x="680" y="216" name="inst_C7310C2E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="hex_rock_obj" x="476" y="162" name="inst_87C57470" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="hex_rock_obj" x="408" y="180" name="inst_606F6163" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="capitol_obj" x="680" y="288" name="inst_A08500F4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="hex_sand_obj" x="680" y="360" name="inst_563BE99F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="hex_sand_obj" x="748" y="342" name="inst_BB74E0BB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="hex_sand_obj" x="748" y="306" name="inst_53BD5600" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -143,12 +130,13 @@
     <instance objName="hex_forest_2_obj" x="680" y="324" name="inst_F189C884" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="hex_forest_2_obj" x="680" y="252" name="inst_6F55E1D3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="hex_grass_obj" x="204" y="162" name="inst_81D4DB95" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="capitol_obj" x="272" y="216" name="inst_D416639D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="village_obj" x="272" y="252" name="inst_FFF7E10A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="village_obj" x="748" y="270" name="inst_7B9AF27C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="stronghold_obj" x="408" y="288" name="inst_ADCB20B5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="stronghold_obj" x="544" y="360" name="inst_06CED867" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="hex_grass_obj" x="544" y="324" name="inst_1F8A256D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="capitol_P2_obj" x="680" y="288" name="inst_DAF00C51" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="capitol_P1_obj" x="272" y="216" name="inst_2CEF093C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
