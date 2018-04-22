@@ -6,8 +6,16 @@
   <NewExtensions/>
   <sounds name="sound"/>
   <sprites name="sprites">
-    <sprite>sprites\hex_spr</sprite>
-    <sprite>sprites\forest_1_spr</sprite>
+    <sprite>sprites\hex_grass_spr</sprite>
+    <sprite>sprites\hex_sand_spr</sprite>
+    <sprite>sprites\hex_water_spr</sprite>
+    <sprite>sprites\hex_rock_spr</sprite>
+    <sprite>sprites\hex_forest_1_spr</sprite>
+    <sprite>sprites\hex_forest_2_spr</sprite>
+    <sprite>sprites\capitol_1_spr</sprite>
+    <sprite>sprites\capitol_spr</sprite>
+    <sprite>sprites\village_spr</sprite>
+    <sprite>sprites\stronghold_spr</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -19,9 +27,20 @@
     </scripts>
   </scripts>
   <objects name="objects">
-    <object>objects\hex_obj</object>
+    <objects name="hex">
+      <object>objects\hex_water_obj</object>
+      <object>objects\hex_grass_obj</object>
+      <object>objects\hex_sand_obj</object>
+      <object>objects\hex_rock_obj</object>
+      <object>objects\hex_forest_1_obj</object>
+      <object>objects\hex_forest_2_obj</object>
+    </objects>
     <object>objects\game_obj</object>
-    <object>objects\forest_obj</object>
+    <objects name="builds">
+      <object>objects\capitol_obj</object>
+      <object>objects\village_obj</object>
+      <object>objects\stronghold_obj</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\map_test</room>

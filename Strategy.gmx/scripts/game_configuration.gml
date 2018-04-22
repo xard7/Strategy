@@ -1,5 +1,8 @@
 /// game_configuration()
 
+
+// snapowanie (68, 18)
+
 global.MAP_WIDTH = 10;
 global.MAP_HEIGHT = 10;
 
