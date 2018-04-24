@@ -20,12 +20,15 @@
   <backgrounds name="background"/>
   <paths name="paths"/>
   <scripts name="scripts">
-    <script>scripts\enums.gml</script>
-    <script>scripts\room_configuration.gml</script>
-    <scripts name="Functions">
+    <scripts name="functions">
       <script>scripts\add_hex_to_grid.gml</script>
       <script>scripts\set_object_depth.gml</script>
     </scripts>
+    <script>scripts\enums.gml</script>
+    <script>scripts\map_configuration.gml</script>
+    <script>scripts\player_configuration.gml</script>
+    <script>scripts\capitol_p1_create.gml</script>
+    <script>scripts\hex_precreate.gml</script>
   </scripts>
   <objects name="objects">
     <objects name="hex">
@@ -36,7 +39,6 @@
       <object>objects\hex_forest_1_obj</object>
       <object>objects\hex_forest_2_obj</object>
     </objects>
-    <object>objects\game_obj</object>
     <objects name="builds">
       <object>objects\capitol_P1_obj</object>
       <object>objects\capitol_P2_obj</object>

@@ -10,3 +10,11 @@ enum MAP_TERRAIN_TYPE
     forest      = 16,
 };
 
+enum STACK_TYPE
+{
+    food,
+    population,
+    workers,
+    military,
+    gold,
+};

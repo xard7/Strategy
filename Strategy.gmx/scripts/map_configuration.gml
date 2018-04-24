@@ -1,4 +1,4 @@
-/// room_configuration()
+/// map_configuration()
 
 global.HEX_X_OFFSET = 68;
 global.HEX_Y_OFFSET = 18; // pelny offset to HEX_Y_OFFSET * 2
@@ -56,6 +56,15 @@ for(var i = 0; i < instance_count; i++)
         var x_in_grid = floor((x - min_x) / global.HEX_X_OFFSET);
         var y_in_grid = floor((y - min_y) / (global.HEX_Y_OFFSET * 2));
         
+        if( variable_instance_exists(instance_id[i], "m_x_in_grid") != 0 )
+        {
+            m_x_in_grid = x_in_grid;
+        }
+        if( variable_instance_exists(instance_id[i], "m_y_in_grid") != 0 )
+        {
+            m_y_in_grid = y_in_grid;
+        }
+        
         var grid_value = ds_grid_get(global.MAP_GRID, x_in_grid, y_in_grid);
         
         var dest_hex_type = MAP_TERRAIN_TYPE.void;
@@ -88,6 +97,7 @@ for(var i = 0; i < instance_count; i++)
         
         if(dest_hex_type != MAP_TERRAIN_TYPE.void)
         {
+            m_type = dest_hex_type;
             add_hex_to_grid(global.MAP_GRID, dest_hex_type, x_in_grid, y_in_grid);
         }
     }
