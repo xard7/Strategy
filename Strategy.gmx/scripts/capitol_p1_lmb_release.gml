@@ -1,6 +1,6 @@
 /// capitol_p1_lmb_release()
 
-var hex_inst = collision_point(mouse_x, mouse_y, hex_obj, false, true);
+var hex_inst = instance_position(mouse_x, mouse_y, hex_obj);
 if(hex_inst && hex_inst.m_selected)
 {
 
