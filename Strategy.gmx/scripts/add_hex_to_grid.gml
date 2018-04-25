@@ -7,7 +7,7 @@ var l_y = argument[3];
 
 if( l_x < ds_grid_width(l_mg) && l_y < ds_grid_height(l_mg))
 {
-    ds_grid_add(l_mg, l_x, l_y, l_hex);
+    ds_grid_set(l_mg, l_x, l_y, l_hex);
 }
 else
 {

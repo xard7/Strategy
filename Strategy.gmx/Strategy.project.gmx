@@ -23,6 +23,7 @@
     <scripts name="functions">
       <script>scripts\add_hex_to_grid.gml</script>
       <script>scripts\set_object_depth.gml</script>
+      <script>scripts\get_hex_form_map.gml</script>
     </scripts>
     <script>scripts\enums.gml</script>
     <script>scripts\map_configuration.gml</script>
@@ -30,6 +31,9 @@
     <script>scripts\capitol_p1_create.gml</script>
     <script>scripts\hex_precreate.gml</script>
   </scripts>
+  <shaders name="shaders">
+    <shader type="GLSLES">shaders\hex_selected_sh.shader</shader>
+  </shaders>
   <objects name="objects">
     <objects name="hex">
       <object>objects\hex_water_obj</object>

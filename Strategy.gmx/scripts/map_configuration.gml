@@ -10,22 +10,13 @@ for(var i = 0; i < instance_count; i++)
     with (instance_id[i])
     {
         if(min_x > x)
-        {
             min_x = x;
-        }
         if(max_x < x)
-        {
             max_x = x;
-        }
-        
         if(min_y > y)
-        {
             min_y = y;
-        }
         if(max_y < y)
-        {
             max_y = y;
-        }
     }
 }
 
@@ -56,11 +47,11 @@ for(var i = 0; i < instance_count; i++)
         var x_in_grid = floor((x - min_x) / global.HEX_X_OFFSET);
         var y_in_grid = floor((y - min_y) / (global.HEX_Y_OFFSET * 2));
         
-        if( variable_instance_exists(instance_id[i], "m_x_in_grid") != 0 )
+        if( variable_instance_exists(id, "m_x_in_grid") != 0 )
         {
             m_x_in_grid = x_in_grid;
         }
-        if( variable_instance_exists(instance_id[i], "m_y_in_grid") != 0 )
+        if( variable_instance_exists(id, "m_y_in_grid") != 0 )
         {
             m_y_in_grid = y_in_grid;
         }
