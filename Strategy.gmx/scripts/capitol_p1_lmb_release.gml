@@ -15,9 +15,14 @@ if(global.GAME_STATE == GAME_FLOW.ingame)
     var building_inst = instance_position(mouse_x, mouse_y, building_obj);
     if(building_inst)
     {
-        global.SELECTED_HEX = building_inst.id;
-        global.GAME_STATE = GAME_FLOW.menu;
-        ds_list_add(global.MENU_ITEMS, instance_create(building_inst.x, building_inst.y, build_btn_obj));
+        switch(object_get_name(building_inst.object_index))
+        {
+            case "capitol_P1_obj":
+                global.SELECTED_HEX = building_inst.id;
+                global.GAME_STATE = GAME_FLOW.menu;
+                ds_list_add(global.MENU_ITEMS, instance_create(building_inst.x, building_inst.y, build_btn_obj));
+            break;
+        }
     }
 }
 else if(global.GAME_STATE == GAME_FLOW.menu)
@@ -86,7 +91,7 @@ else if(global.GAME_STATE == GAME_FLOW.select_hex)
     var hex_inst = instance_position(mouse_x, mouse_y, hex_obj);
     if(hex_inst && hex_inst.m_selected)
     {
-        instance_create(hex_inst.x, hex_inst.y, village_obj);
+        instance_create(hex_inst.x, hex_inst.y, place_obj);
     }
     
     if(ds_list_size(m_selected_inst) != 0)
