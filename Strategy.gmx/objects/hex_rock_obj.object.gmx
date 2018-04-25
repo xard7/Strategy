@@ -69,7 +69,7 @@
           </argument>
           <argument>
             <kind>0</kind>
-            <string>90</string>
+            <string>BUILDING_DEPTH</string>
           </argument>
         </arguments>
       </action>

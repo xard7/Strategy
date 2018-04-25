@@ -18,3 +18,12 @@ enum STACK_TYPE
     military,
     gold,
 };
+
+enum GAME_FLOW
+{
+    ingame,
+    menu,
+    select_hex,
+    waiting_turn,
+}
+

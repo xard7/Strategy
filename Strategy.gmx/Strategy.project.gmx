@@ -6,15 +6,22 @@
   <NewExtensions/>
   <sounds name="sound"/>
   <sprites name="sprites">
-    <sprite>sprites\hex_grass_spr</sprite>
-    <sprite>sprites\hex_sand_spr</sprite>
-    <sprite>sprites\hex_water_spr</sprite>
-    <sprite>sprites\hex_rock_spr</sprite>
-    <sprite>sprites\hex_forest_1_spr</sprite>
-    <sprite>sprites\hex_forest_2_spr</sprite>
-    <sprite>sprites\capitol_spr</sprite>
-    <sprite>sprites\village_spr</sprite>
-    <sprite>sprites\stronghold_spr</sprite>
+    <sprites name="hex">
+      <sprite>sprites\hex_grass_spr</sprite>
+      <sprite>sprites\hex_sand_spr</sprite>
+      <sprite>sprites\hex_water_spr</sprite>
+      <sprite>sprites\hex_rock_spr</sprite>
+      <sprite>sprites\hex_forest_1_spr</sprite>
+      <sprite>sprites\hex_forest_2_spr</sprite>
+    </sprites>
+    <sprites name="building">
+      <sprite>sprites\capitol_spr</sprite>
+      <sprite>sprites\village_spr</sprite>
+      <sprite>sprites\stronghold_spr</sprite>
+    </sprites>
+    <sprites name="temp">
+      <sprite>sprites\build_btn_spr</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -45,18 +52,29 @@
       <object>objects\hex_forest_1_obj</object>
       <object>objects\hex_forest_2_obj</object>
     </objects>
-    <objects name="builds">
+    <objects name="building">
       <object>objects\building_obj</object>
       <object>objects\capitol_P1_obj</object>
       <object>objects\capitol_P2_obj</object>
       <object>objects\village_obj</object>
       <object>objects\stronghold_obj</object>
     </objects>
+    <objects name="menu">
+      <object>objects\menu_obj</object>
+    </objects>
+    <objects name="temp">
+      <object>objects\build_btn_obj</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\econony_test</room>
     <room>rooms\map_test</room>
   </rooms>
+  <constants number="3">
+    <constant name="HEX_DEPTH">100</constant>
+    <constant name="BUILDING_DEPTH">90</constant>
+    <constant name="MENU_DEPTH">10</constant>
+  </constants>
   <help>
     <rtf>help.rtf</rtf>
   </help>
