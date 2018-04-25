@@ -23,19 +23,22 @@
     <scripts name="functions">
       <script>scripts\add_hex_to_grid.gml</script>
       <script>scripts\set_object_depth.gml</script>
-      <script>scripts\get_hex_form_map.gml</script>
+      <script>scripts\get_hex_xy.gml</script>
+      <script>scripts\hex_precreate.gml</script>
+      <script>scripts\hex_set_select.gml</script>
     </scripts>
     <script>scripts\enums.gml</script>
     <script>scripts\map_configuration.gml</script>
     <script>scripts\player_configuration.gml</script>
     <script>scripts\capitol_p1_create.gml</script>
-    <script>scripts\hex_precreate.gml</script>
+    <script>scripts\capitol_p1_lmb_release.gml</script>
   </scripts>
   <shaders name="shaders">
     <shader type="GLSLES">shaders\hex_selected_sh.shader</shader>
   </shaders>
   <objects name="objects">
     <objects name="hex">
+      <object>objects\hex_obj</object>
       <object>objects\hex_water_obj</object>
       <object>objects\hex_grass_obj</object>
       <object>objects\hex_sand_obj</object>
@@ -44,6 +47,7 @@
       <object>objects\hex_forest_2_obj</object>
     </objects>
     <objects name="builds">
+      <object>objects\building_obj</object>
       <object>objects\capitol_P1_obj</object>
       <object>objects\capitol_P2_obj</object>
       <object>objects\village_obj</object>

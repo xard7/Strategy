@@ -1,4 +1,4 @@
-/// get_hex_form_map(x, y, obj)
+/// get_hex_xy(x, y, obj)
 
 if(argument_count != 3)
 {

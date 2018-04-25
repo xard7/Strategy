@@ -39,11 +39,6 @@ for(var i = 0; i < instance_count; i++)
     {
         var obj_name = object_get_name(object_index);
         
-        if(obj_name == "capitol_P1_obj")
-        {
-            continue;
-        }
-        
         var x_in_grid = floor((x - min_x) / global.HEX_X_OFFSET);
         var y_in_grid = floor((y - min_y) / (global.HEX_Y_OFFSET * 2));
         
@@ -54,6 +49,11 @@ for(var i = 0; i < instance_count; i++)
         if( variable_instance_exists(id, "m_y_in_grid") != 0 )
         {
             m_y_in_grid = y_in_grid;
+        }
+        
+        if(obj_name == "capitol_P1_obj")
+        {
+            continue;
         }
         
         var grid_value = ds_grid_get(global.MAP_GRID, x_in_grid, y_in_grid);
