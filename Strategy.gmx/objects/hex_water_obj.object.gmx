@@ -140,8 +140,11 @@ if(m_selected)
 {
     shader_reset();
 }
-
-draw_text(x - 10, y - 10, string(m_x_in_grid) + ", " + string(m_y_in_grid))
+    
+if(DEBUG_MODE == true)
+{
+    draw_text(x - 10, y - 10, string(m_x_in_grid) + ", " + string(m_y_in_grid))
+}
 </string>
           </argument>
         </arguments>
