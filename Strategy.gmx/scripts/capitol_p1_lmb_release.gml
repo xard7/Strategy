@@ -21,6 +21,8 @@ if(global.GAME_STATE == GAME_FLOW.ingame)
                 global.SELECTED_HEX = building_inst.id;
                 global.GAME_STATE = GAME_FLOW.menu;
                 ds_list_add(global.MENU_ITEMS, instance_create(building_inst.x, building_inst.y, build_btn_obj));
+                ds_list_add(global.MENU_ITEMS, instance_create(building_inst.x, building_inst.y, upgrade_btn_obj));
+                ds_list_add(global.MENU_ITEMS, instance_create(building_inst.x, building_inst.y, destroy_btn_obj));
             break;
         }
     }
@@ -30,40 +32,48 @@ else if(global.GAME_STATE == GAME_FLOW.menu)
     var menu_inst = instance_position(mouse_x, mouse_y, menu_obj);
     if(menu_inst)
     {
-        if(global.SELECTED_HEX)
+        var button_name = object_get_name(global.SELECTED_HEX.object_index);
+        if(button_name == "dupa")
         {
-            global.GAME_STATE = GAME_FLOW.select_hex;
-            switch(object_get_name(global.SELECTED_HEX.object_index))
+            if(global.SELECTED_HEX)
             {
-                case "capitol_P1_obj":
-                    var hex_inst = get_hex_xy(x - global.HEX_X_OFFSET, y - global.HEX_Y_OFFSET, hex_obj);
-                    if(hex_inst != noone) hex_set_select(hex_inst, true);
-                    ds_list_add(m_selected_inst, hex_inst);
+                global.GAME_STATE = GAME_FLOW.select_hex;
+                switch(object_get_name(global.SELECTED_HEX.object_index))
+                {
+                    case "capitol_P1_obj":
+                        var hex_inst = get_hex_xy(x - global.HEX_X_OFFSET, y - global.HEX_Y_OFFSET, hex_obj);
+                        if(hex_inst != noone) hex_set_select(hex_inst, true);
+                        ds_list_add(m_selected_inst, hex_inst);
+                        
+                        hex_inst = get_hex_xy(x, y - (global.HEX_Y_OFFSET * 2), hex_obj);
+                        if(hex_inst != noone)  hex_set_select(hex_inst, true);
+                        ds_list_add(m_selected_inst, hex_inst);
+                        
+                        hex_inst = get_hex_xy(x + global.HEX_X_OFFSET, y - global.HEX_Y_OFFSET, hex_obj);
+                        if(hex_inst != noone)  hex_set_select(hex_inst, true);
+                        ds_list_add(m_selected_inst, hex_inst);
+                        
+                        hex_inst = get_hex_xy(x - global.HEX_X_OFFSET, y + global.HEX_Y_OFFSET, hex_obj);
+                        if(hex_inst != noone) hex_set_select(hex_inst, true);
+                        ds_list_add(m_selected_inst, hex_inst);
+                        
+                        hex_inst = get_hex_xy(x, y + (global.HEX_Y_OFFSET * 2), hex_obj);
+                        if(hex_inst != noone)  hex_set_select(hex_inst, true);
+                        ds_list_add(m_selected_inst, hex_inst);
+                        
+                        hex_inst = get_hex_xy(x + global.HEX_X_OFFSET, y + global.HEX_Y_OFFSET, hex_obj);
+                        if(hex_inst != noone)  hex_set_select(hex_inst, true);
+                        ds_list_add(m_selected_inst, hex_inst);
+                    break;
                     
-                    hex_inst = get_hex_xy(x, y - (global.HEX_Y_OFFSET * 2), hex_obj);
-                    if(hex_inst != noone)  hex_set_select(hex_inst, true);
-                    ds_list_add(m_selected_inst, hex_inst);
-                    
-                    hex_inst = get_hex_xy(x + global.HEX_X_OFFSET, y - global.HEX_Y_OFFSET, hex_obj);
-                    if(hex_inst != noone)  hex_set_select(hex_inst, true);
-                    ds_list_add(m_selected_inst, hex_inst);
-                    
-                    hex_inst = get_hex_xy(x - global.HEX_X_OFFSET, y + global.HEX_Y_OFFSET, hex_obj);
-                    if(hex_inst != noone) hex_set_select(hex_inst, true);
-                    ds_list_add(m_selected_inst, hex_inst);
-                    
-                    hex_inst = get_hex_xy(x, y + (global.HEX_Y_OFFSET * 2), hex_obj);
-                    if(hex_inst != noone)  hex_set_select(hex_inst, true);
-                    ds_list_add(m_selected_inst, hex_inst);
-                    
-                    hex_inst = get_hex_xy(x + global.HEX_X_OFFSET, y + global.HEX_Y_OFFSET, hex_obj);
-                    if(hex_inst != noone)  hex_set_select(hex_inst, true);
-                    ds_list_add(m_selected_inst, hex_inst);
-                break;
-                
-                default:
-                    show_debug_message("Unknow building object!");
-                    global.GAME_STATE = GAME_FLOW.ingame;
+                    default:
+                        show_debug_message("Unknow building object!");
+                        global.GAME_STATE = GAME_FLOW.ingame;
+                }
+            }
+            else
+            {
+                global.GAME_STATE = GAME_FLOW.ingame;
             }
         }
         else
