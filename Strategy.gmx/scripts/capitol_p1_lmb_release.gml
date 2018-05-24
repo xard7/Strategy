@@ -23,6 +23,7 @@ if(global.GAME_STATE == GAME_FLOW.ingame)
                 ds_list_add(global.MENU_ITEMS, instance_create(building_inst.x, building_inst.y, build_btn_obj));
                 ds_list_add(global.MENU_ITEMS, instance_create(building_inst.x, building_inst.y, upgrade_btn_obj));
                 ds_list_add(global.MENU_ITEMS, instance_create(building_inst.x, building_inst.y, destroy_btn_obj));
+                ds_list_add(global.MENU_ITEMS, instance_create(building_inst.x, building_inst.y, send_btn_obj));
             break;
         }
     }
@@ -32,7 +33,34 @@ else if(global.GAME_STATE == GAME_FLOW.menu)
     var menu_inst = instance_position(mouse_x, mouse_y, menu_obj);
     if(menu_inst)
     {
-        var button_name = object_get_name(global.SELECTED_HEX.object_index);
+        var button_name = object_get_name(menu_inst.object_index);
+        switch(button_name)
+        {
+            case "build_btn_obj":
+            {
+            }
+            break;
+            
+            case "upgrade_btn_obj":
+            {
+            }
+            break;
+            
+            case "destroy_btn_obj":
+            {
+            }
+            break;
+            
+            case "send_btn_obj":
+            {
+            }
+            break;
+            
+            default:
+            {
+                global.GAME_STATE = GAME_FLOW.ingame;
+            }
+        }
         if(button_name == "dupa")
         {
             if(global.SELECTED_HEX)
