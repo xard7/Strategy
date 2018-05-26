@@ -137,6 +137,7 @@
     <instance objName="hex_grass_obj" x="544" y="324" name="inst_1F8A256D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="capitol_P2_obj" x="680" y="288" name="inst_DAF00C51" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="capitol_P1_obj" x="272" y="216" name="inst_2CEF093C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="city_obj" x="204" y="234" name="inst_95D0FBC9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

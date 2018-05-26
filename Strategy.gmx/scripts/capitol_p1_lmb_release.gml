@@ -30,98 +30,90 @@ if(global.GAME_STATE == GAME_FLOW.ingame)
 }
 else if(global.GAME_STATE == GAME_FLOW.menu)
 {
+    var destroyMenu = false;
     var menu_inst = instance_position(mouse_x, mouse_y, menu_obj);
     if(menu_inst)
     {
         var button_name = object_get_name(menu_inst.object_index);
         switch(button_name)
         {
-            case "build_btn_obj":
+            case "village_btn_obj":
             {
+                global.BUILD_REQUEST = BUILD_REQUEST_TYPE.village;
             }
             break;
-            
-            case "upgrade_btn_obj":
+            case "city_btn_obj":
             {
+                global.BUILD_REQUEST = BUILD_REQUEST_TYPE.city;
             }
             break;
-            
-            case "destroy_btn_obj":
+            case "stronghold_btn_obj":
             {
-            }
-            break;
-            
-            case "send_btn_obj":
-            {
+                global.BUILD_REQUEST = BUILD_REQUEST_TYPE.stronghold;
             }
             break;
             
             default:
             {
-                global.GAME_STATE = GAME_FLOW.ingame;
+                global.BUILD_REQUEST = BUILD_REQUEST_TYPE.unknow;
             }
         }
-        if(button_name == "dupa")
+        
+        switch(button_name)
         {
-            if(global.SELECTED_HEX)
+            case "build_btn_obj":
             {
-                global.GAME_STATE = GAME_FLOW.select_hex;
-                switch(object_get_name(global.SELECTED_HEX.object_index))
+                if(global.SELECTED_HEX != noone)
                 {
-                    case "capitol_P1_obj":
-                        var hex_inst = get_hex_xy(x - global.HEX_X_OFFSET, y - global.HEX_Y_OFFSET, hex_obj);
-                        if(hex_inst != noone) hex_set_select(hex_inst, true);
-                        ds_list_add(m_selected_inst, hex_inst);
-                        
-                        hex_inst = get_hex_xy(x, y - (global.HEX_Y_OFFSET * 2), hex_obj);
-                        if(hex_inst != noone)  hex_set_select(hex_inst, true);
-                        ds_list_add(m_selected_inst, hex_inst);
-                        
-                        hex_inst = get_hex_xy(x + global.HEX_X_OFFSET, y - global.HEX_Y_OFFSET, hex_obj);
-                        if(hex_inst != noone)  hex_set_select(hex_inst, true);
-                        ds_list_add(m_selected_inst, hex_inst);
-                        
-                        hex_inst = get_hex_xy(x - global.HEX_X_OFFSET, y + global.HEX_Y_OFFSET, hex_obj);
-                        if(hex_inst != noone) hex_set_select(hex_inst, true);
-                        ds_list_add(m_selected_inst, hex_inst);
-                        
-                        hex_inst = get_hex_xy(x, y + (global.HEX_Y_OFFSET * 2), hex_obj);
-                        if(hex_inst != noone)  hex_set_select(hex_inst, true);
-                        ds_list_add(m_selected_inst, hex_inst);
-                        
-                        hex_inst = get_hex_xy(x + global.HEX_X_OFFSET, y + global.HEX_Y_OFFSET, hex_obj);
-                        if(hex_inst != noone)  hex_set_select(hex_inst, true);
-                        ds_list_add(m_selected_inst, hex_inst);
-                    break;
-                    
-                    default:
-                        show_debug_message("Unknow building object!");
-                        global.GAME_STATE = GAME_FLOW.ingame;
+                    ds_list_add(global.MENU_ITEMS, instance_create(global.SELECTED_HEX.x + 10, global.SELECTED_HEX.y - 64, village_btn_obj));
+                    ds_list_add(global.MENU_ITEMS, instance_create(global.SELECTED_HEX.x + 10, global.SELECTED_HEX.y - 30, city_btn_obj));
+                    ds_list_add(global.MENU_ITEMS, instance_create(global.SELECTED_HEX.x + 10, global.SELECTED_HEX.y + 6, stronghold_btn_obj));
                 }
             }
-            else
+            break;
+            
+            case "village_btn_obj":
+            case "city_btn_obj":
+            case "stronghold_btn_obj":
             {
-                global.GAME_STATE = GAME_FLOW.ingame;
+                if(global.SELECTED_HEX)
+                {
+                    global.GAME_STATE = GAME_FLOW.select_hex;
+                    switch(object_get_name(global.SELECTED_HEX.object_index))
+                    {
+                        case "capitol_P1_obj":
+                        {
+                            set_hex_selection(self);
+                        }
+                        break;
+                        
+                        default:
+                            show_debug_message("Unknow building object!");
+                            global.GAME_STATE = GAME_FLOW.ingame;
+                    }
+                }
+                destroyMenu = true;
             }
-        }
-        else
-        {
-            global.GAME_STATE = GAME_FLOW.ingame;
+            break;
         }
     }
     else
     {
         global.GAME_STATE = GAME_FLOW.ingame;
+        destroyMenu = true;
     }
     
-    global.SELECTED_HEX = noone;
-    if(ds_list_size(global.MENU_ITEMS) != 0)
+    if(destroyMenu)
     {
-        for(var i = 0; i < ds_list_size(global.MENU_ITEMS); i++ )
+        global.SELECTED_HEX = noone;
+        if(ds_list_size(global.MENU_ITEMS) != 0)
         {
-            instance_destroy(global.MENU_ITEMS[| i]);
+            for(var i = 0; i < ds_list_size(global.MENU_ITEMS); i++ )
+            {
+                instance_destroy(global.MENU_ITEMS[| i]);
+            }
+            ds_list_clear(global.MENU_ITEMS);
         }
-        ds_list_clear(global.MENU_ITEMS);
     }
 }
 else if(global.GAME_STATE == GAME_FLOW.select_hex)
@@ -129,6 +121,7 @@ else if(global.GAME_STATE == GAME_FLOW.select_hex)
     var hex_inst = instance_position(mouse_x, mouse_y, hex_obj);
     if(hex_inst && hex_inst.m_selected)
     {
+        hex_inst.m_type = hex_inst.m_type | MAP_TERRAIN_TYPE.build;
         instance_create(hex_inst.x, hex_inst.y, place_obj);
     }
     

@@ -8,6 +8,7 @@ enum MAP_TERRAIN_TYPE
     sand        = 4,
     rock        = 8,
     forest      = 16,
+    build       = 32,
 };
 
 enum STACK_TYPE
@@ -25,5 +26,16 @@ enum GAME_FLOW
     menu,
     select_hex,
     waiting_turn,
-}
+};
+
+enum BUILD_REQUEST_TYPE
+{
+    unknow,
+    village,
+    city,
+    mine,
+    sawmill,
+    port,
+    stronghold,
+};
 
