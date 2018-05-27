@@ -5,6 +5,8 @@ if(argument_count != 2)
     return false;
 }
 
+var ret = false;
+
 var l_hex = argument[0];
 var l_selected = argument[1];
 
@@ -15,8 +17,9 @@ with(l_hex)
     if( (m_type & not_grass) == 0 && is_grass != 0)
     {
         m_selected = l_selected;
+        ret = true;
     }
 }
 
-return true;
+return ret;
 

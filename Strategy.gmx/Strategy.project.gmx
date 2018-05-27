@@ -29,6 +29,7 @@
       <sprite>sprites\village_btn_spr</sprite>
       <sprite>sprites\stronghold_btn_spr</sprite>
       <sprite>sprites\city_btn_spr</sprite>
+      <sprite>sprites\next_turn_btn_spr</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background"/>
@@ -41,6 +42,9 @@
       <script>scripts\hex_precreate.gml</script>
       <script>scripts\hex_set_select.gml</script>
       <script>scripts\set_hex_selection.gml</script>
+      <script>scripts\check_neighbor_hex.gml</script>
+      <script>scripts\pack_production_data.gml</script>
+      <script>scripts\unpack_production_data.gml</script>
     </scripts>
     <script>scripts\enums.gml</script>
     <script>scripts\map_configuration.gml</script>
@@ -48,6 +52,8 @@
     <script>scripts\room_ended.gml</script>
     <script>scripts\capitol_p1_create.gml</script>
     <script>scripts\capitol_p1_lmb_release.gml</script>
+    <script>scripts\place_create.gml</script>
+    <script>scripts\next_turn.gml</script>
   </scripts>
   <shaders name="shaders">
     <shader type="GLSLES">shaders\hex_selected_sh.shader</shader>
@@ -80,6 +86,7 @@
       <object>objects\village_btn_obj</object>
       <object>objects\stronghold_btn_obj</object>
       <object>objects\city_btn_obj</object>
+      <object>objects\next_turn_btn_obj</object>
     </objects>
   </objects>
   <rooms name="rooms">
