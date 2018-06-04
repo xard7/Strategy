@@ -7,12 +7,18 @@ enum _bity_data
     bit3 = 4,
     bit4 = 8,
     bit5 = 16,
+    bit6 = 32,
+    bit7 = 64,
+    bit8 = 128,
     
-    bit1_2 = 32,
-    bit2_2 = 64,
-    bit3_2 = 128,
-    bit4_2 = 256,
-    bit5_2 = 512,
+    bit1_2 = 256,
+    bit2_2 = 512,
+    bit3_2 = 1024,
+    bit4_2 = 2048,
+    bit5_2 = 4096,
+    bit6_2 = 8192,
+    bit7_2 = 16384,
+    bit8_2 = 32768,
 } 
 
 if(argument_count != 2)
@@ -21,28 +27,7 @@ if(argument_count != 2)
 }
 var food = argument[0];
 var gold_in = argument[1];
-var gold_out = 0;
-
-if((gold_in & _bity_data.bit1) != 0)
-{
-    gold_out += _bity_data.bit1_2;
-}
-if((gold_in & _bity_data.bit2) != 0)
-{
-    gold_out += _bity_data.bit2_2;
-}
-if((gold_in & _bity_data.bit3) != 0)
-{
-    gold_out += _bity_data.bit3_2;
-}
-if((gold_in & _bity_data.bit4) != 0)
-{
-    gold_out += _bity_data.bit4_2;
-}
-if((gold_in & _bity_data.bit5) != 0)
-{
-    gold_out += _bity_data.bit5_2;
-}
+var gold_out = gold_in << 8;
 
 return (gold_out | food);
 

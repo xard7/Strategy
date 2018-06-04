@@ -94,8 +94,10 @@
             <string>draw_self();
 var c = draw_get_colour();
 draw_set_colour(make_colour_rgb(0, 0, 0)); 
-draw_text(x - 40, y - 10,
-    "f:" + string(global.STOCK[STOCK_TYPE.food]) + ", g:" + string(global.STOCK[STOCK_TYPE.gold]));
+draw_text(x - 60, y - 10,
+    "f:" + string(global.STOCK[STOCK_TYPE.food])
+    + ",g:" + string(global.STOCK[STOCK_TYPE.gold])
+    + ",m:" + string(global.STOCK[STOCK_TYPE.military]));
 draw_set_colour(c); 
 
 </string>

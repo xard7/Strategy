@@ -20,5 +20,6 @@ global.MAT_REQUIRED[BUILD_TYPE.city] = 3;
 global.MAT_REQUIRED[BUILD_TYPE.stronghold] = 5;
 
 global.PROCUDTION[BUILD_TYPE.village] = pack_production_data(1, 0);
-global.PROCUDTION[BUILD_TYPE.city] = pack_production_data(0, 1);
+global.PROCUDTION[BUILD_TYPE.city] = pack_production_data(1, 1);
+global.PROCUDTION[BUILD_TYPE.stronghold] = pack_production_data(1, 1);
 
