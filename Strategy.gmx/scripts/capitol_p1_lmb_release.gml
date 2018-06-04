@@ -1,9 +1,9 @@
 /// capitol_p1_lmb_release()
 
-//var packed_data = pack_production_data(0, 5);
-//show_debug_message("packed data: " + string(packed_data));
-//var unpacked_data = unpack_production_data(packed_data);
-//show_debug_message("unpacked data: " + string(unpacked_data[0]) + ", " + string(unpacked_data[1]));
+var packed_data = pack_production_data(0, 5);
+show_debug_message("packed data: " + string(packed_data));
+var unpacked_data = unpack_production_data(packed_data);
+show_debug_message("unpacked data: " + string(unpacked_data[0]) + ", " + string(unpacked_data[1]));
 
 if(global.GAME_STATE == GAME_FLOW.ingame)
 {
@@ -83,9 +83,20 @@ else if(global.GAME_STATE == GAME_FLOW.menu)
             {
                 if(global.SELECTED_HEX != noone)
                 {
-                    ds_list_add(global.MENU_ITEMS, instance_create(global.SELECTED_HEX.x + 10, global.SELECTED_HEX.y - 64, village_btn_obj));
-                    ds_list_add(global.MENU_ITEMS, instance_create(global.SELECTED_HEX.x + 10, global.SELECTED_HEX.y - 30, city_btn_obj));
-                    ds_list_add(global.MENU_ITEMS, instance_create(global.SELECTED_HEX.x + 10, global.SELECTED_HEX.y + 6, stronghold_btn_obj));
+                    if(global.STOCK[STOCK_TYPE.gold] >= global.MAT_REQUIRED[BUILD_TYPE.village])
+                    {
+                        ds_list_add(global.MENU_ITEMS, instance_create(global.SELECTED_HEX.x + 10, global.SELECTED_HEX.y - 64, village_btn_obj));
+                    }
+                    
+                    if(global.STOCK[STOCK_TYPE.gold] >= global.MAT_REQUIRED[BUILD_TYPE.city])
+                    {
+                        ds_list_add(global.MENU_ITEMS, instance_create(global.SELECTED_HEX.x + 10, global.SELECTED_HEX.y - 30, city_btn_obj));
+                    }
+                    
+                    if(global.STOCK[STOCK_TYPE.gold] >= global.MAT_REQUIRED[BUILD_TYPE.stronghold])
+                    {
+                        ds_list_add(global.MENU_ITEMS, instance_create(global.SELECTED_HEX.x + 10, global.SELECTED_HEX.y + 6, stronghold_btn_obj));
+                    }
                 }
             }
             break;
@@ -144,6 +155,27 @@ else if(global.GAME_STATE == GAME_FLOW.select_hex)
         ds_list_add(global.USED_HEXS, place.id);
         place.m_to_become = global.BUILD_REQUEST;
         place.m_remaining_time = global.TIME_REQUIRED[place.m_to_become];
+        
+        switch(place.m_to_become)
+        {
+            case BUILD_TYPE.village:
+            {
+                global.STOCK[STOCK_TYPE.gold] -= global.MAT_REQUIRED[BUILD_TYPE.village];
+            }
+            break;
+            
+            case BUILD_TYPE.city:
+            {
+                global.STOCK[STOCK_TYPE.gold] -= global.MAT_REQUIRED[BUILD_TYPE.city];
+            }
+            break;
+            
+            case BUILD_TYPE.stronghold:
+            {
+                global.STOCK[STOCK_TYPE.gold] -= global.MAT_REQUIRED[BUILD_TYPE.stronghold];
+            }
+            break;
+        }
     }
     
     if(ds_list_size(m_selected_inst) != 0)

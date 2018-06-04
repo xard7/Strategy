@@ -30,12 +30,14 @@ for(var i = 0; i < ds_list_size(global.USED_HEXS); i++)
                     case BUILD_TYPE.village:
                     {
                         new_build = instance_create(hex_inst.x, hex_inst.y, village_obj); 
+                        new_build.m_production = global.PROCUDTION[BUILD_TYPE.village];
                     }
                     break;
                     
                     case BUILD_TYPE.city:
                     {
                         new_build = instance_create(hex_inst.x, hex_inst.y, city_obj);
+                        new_build.m_production = global.PROCUDTION[BUILD_TYPE.city];
                     }
                     break;
                     
@@ -52,6 +54,15 @@ for(var i = 0; i < ds_list_size(global.USED_HEXS); i++)
                     instance_destroy(hex_inst);
                 }
             }
+        }
+        break;
+        
+        case "village_obj":
+        case "city_obj":
+        {
+            var upack_procuction = unpack_production_data(hex_inst.m_production);
+            global.STOCK[STOCK_TYPE.food] += upack_procuction[0];
+            global.STOCK[STOCK_TYPE.gold] += upack_procuction[1];
         }
         break;
     }

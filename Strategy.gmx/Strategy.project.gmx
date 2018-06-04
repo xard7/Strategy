@@ -30,6 +30,7 @@
       <sprite>sprites\stronghold_btn_spr</sprite>
       <sprite>sprites\city_btn_spr</sprite>
       <sprite>sprites\next_turn_btn_spr</sprite>
+      <sprite>sprites\hud_btn_spr</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background"/>
@@ -53,6 +54,7 @@
     <script>scripts\capitol_p1_create.gml</script>
     <script>scripts\capitol_p1_lmb_release.gml</script>
     <script>scripts\place_create.gml</script>
+    <script>scripts\building_create.gml</script>
     <script>scripts\next_turn.gml</script>
   </scripts>
   <shaders name="shaders">
@@ -87,6 +89,7 @@
       <object>objects\stronghold_btn_obj</object>
       <object>objects\city_btn_obj</object>
       <object>objects\next_turn_btn_obj</object>
+      <object>objects\hub_btn_obj</object>
     </objects>
   </objects>
   <rooms name="rooms">
