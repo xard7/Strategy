@@ -1,6 +1,6 @@
 /// unpack_production_data(packed_data)
 
-var bitwise_offset = _bity_data.bit1_2 - 1;
+var bitwise_offset = 255;
 var bitwise_offset_2 = bitwise_offset << 8;
 
 if(argument_count != 1)
