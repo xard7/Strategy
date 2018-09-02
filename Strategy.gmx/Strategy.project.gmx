@@ -20,6 +20,7 @@
       <sprite>sprites\stronghold_spr</sprite>
       <sprite>sprites\place_spr</sprite>
       <sprite>sprites\city_spr</sprite>
+      <sprite>sprites\mine_spr</sprite>
     </sprites>
     <sprites name="menu">
       <sprite>sprites\build_btn_spr</sprite>
@@ -29,6 +30,7 @@
       <sprite>sprites\village_btn_spr</sprite>
       <sprite>sprites\stronghold_btn_spr</sprite>
       <sprite>sprites\city_btn_spr</sprite>
+      <sprite>sprites\mine_btn_spr</sprite>
       <sprite>sprites\next_turn_btn_spr</sprite>
       <sprite>sprites\hud_btn_spr</sprite>
     </sprites>
@@ -100,7 +102,7 @@
     <constant name="HEX_DEPTH">1000</constant>
     <constant name="BUILDING_DEPTH">900</constant>
     <constant name="MENU_DEPTH">10</constant>
-    <constant name="DEBUG_MODE">true</constant>
+    <constant name="DEBUG_MODE">false</constant>
   </constants>
   <help>
     <rtf>help.rtf</rtf>

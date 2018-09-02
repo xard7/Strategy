@@ -58,11 +58,35 @@ for(var i = 0; i < ds_list_size(global.USED_HEXS); i++)
         break;
         
         case "village_obj":
-        case "city_obj":
         {
             var upack_procuction = unpack_production_data(hex_inst.m_production);
             global.STOCK[STOCK_TYPE.food] += upack_procuction[0];
-            global.STOCK[STOCK_TYPE.gold] += upack_procuction[1];
+        }
+        break;
+        
+        case "city_obj":
+        case "mine_obj":
+        {
+            var upack_procuction = unpack_production_data(hex_inst.m_production);
+            var c_food = global.STOCK[STOCK_TYPE.food] - upack_procuction[0];
+            if(c_food >= 0)
+            {
+                global.STOCK[STOCK_TYPE.food] = c_food;
+                global.STOCK[STOCK_TYPE.gold] += upack_procuction[1];
+            }
+        }
+        break;
+        
+        case "stronghoold_obj":
+        {
+            var upack_procuction = unpack_production_data(hex_inst.m_production);
+            var c_food = global.STOCK[STOCK_TYPE.food] - upack_procuction[0];
+            var c_gold = global.STOCK[STOCK_TYPE.gold] - upack_procuction[1];
+            if(c_food >= 0 && c_gold >= 0)
+            {
+                global.STOCK[STOCK_TYPE.food] = c_food;
+                global.STOCK[STOCK_TYPE.gold] = c_gold;
+            }
         }
         break;
     }
