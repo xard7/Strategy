@@ -46,6 +46,12 @@ for(var i = 0; i < ds_list_size(global.USED_HEXS); i++)
                         new_build = instance_create(hex_inst.x, hex_inst.y, stronghold_obj);
                     }
                     break;
+                    
+                    case BUILD_TYPE.mine:
+                    {
+                        new_build = instance_create(hex_inst.x, hex_inst.y, mine_obj);
+                    }
+                    break;
                 }
                 
                 if(new_build)

@@ -40,3 +40,14 @@ enum BUILD_TYPE
     unknow,
 };
 
+enum NEIGHBOR_POS
+{
+    unknow,
+    up,
+    left_up,
+    left_down,
+    down,
+    right_down,
+    right_up,
+}
+

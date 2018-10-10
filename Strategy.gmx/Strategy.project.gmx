@@ -46,18 +46,25 @@
       <script>scripts\hex_set_select.gml</script>
       <script>scripts\set_hex_selection.gml</script>
       <script>scripts\check_neighbor_hex.gml</script>
+      <script>scripts\get_neighbor_coods.gml</script>
       <script>scripts\pack_production_data.gml</script>
       <script>scripts\unpack_production_data.gml</script>
     </scripts>
-    <script>scripts\enums.gml</script>
-    <script>scripts\map_configuration.gml</script>
-    <script>scripts\player_configuration.gml</script>
-    <script>scripts\room_ended.gml</script>
-    <script>scripts\capitol_p1_create.gml</script>
-    <script>scripts\capitol_p1_lmb_release.gml</script>
-    <script>scripts\place_create.gml</script>
-    <script>scripts\building_create.gml</script>
-    <script>scripts\next_turn.gml</script>
+    <scripts name="global">
+      <script>scripts\enums.gml</script>
+      <script>scripts\map_configuration.gml</script>
+      <script>scripts\player_configuration.gml</script>
+      <script>scripts\room_ended.gml</script>
+    </scripts>
+    <scripts name="building">
+      <script>scripts\building_create.gml</script>
+      <script>scripts\place_create.gml</script>
+      <script>scripts\capitol_p1_create.gml</script>
+    </scripts>
+    <scripts name="interactions">
+      <script>scripts\capitol_p1_lmb_release.gml</script>
+      <script>scripts\next_turn.gml</script>
+    </scripts>
   </scripts>
   <shaders name="shaders">
     <shader type="GLSLES">shaders\hex_selected_sh.shader</shader>
@@ -91,6 +98,7 @@
       <object>objects\village_btn_obj</object>
       <object>objects\stronghold_btn_obj</object>
       <object>objects\city_btn_obj</object>
+      <object>objects\mine_btn_obj</object>
       <object>objects\next_turn_btn_obj</object>
       <object>objects\hub_btn_obj</object>
     </objects>

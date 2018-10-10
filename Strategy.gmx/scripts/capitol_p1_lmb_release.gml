@@ -71,6 +71,12 @@ else if(global.GAME_STATE == GAME_FLOW.menu)
             }
             break;
             
+            case "mine_btn_obj":
+            {
+                global.BUILD_REQUEST = BUILD_TYPE.mine;
+            }
+            break;
+            
             default:
             {
                 global.BUILD_REQUEST = BUILD_TYPE.unknow;
@@ -95,7 +101,12 @@ else if(global.GAME_STATE == GAME_FLOW.menu)
                     
                     if(global.STOCK[STOCK_TYPE.gold] >= global.MAT_REQUIRED[BUILD_TYPE.stronghold])
                     {
-                        ds_list_add(global.MENU_ITEMS, instance_create(global.SELECTED_HEX.x + 10, global.SELECTED_HEX.y + 6, stronghold_btn_obj));
+                        ds_list_add(global.MENU_ITEMS, instance_create(global.SELECTED_HEX.x + 10, global.SELECTED_HEX.y + 4, stronghold_btn_obj));
+                    }
+                    
+                    if(global.STOCK[STOCK_TYPE.gold] >= global.MAT_REQUIRED[BUILD_TYPE.mine])
+                    {
+                        ds_list_add(global.MENU_ITEMS, instance_create(global.SELECTED_HEX.x + 10, global.SELECTED_HEX.y + 38, mine_btn_obj));
                     }
                 }
             }
@@ -104,6 +115,7 @@ else if(global.GAME_STATE == GAME_FLOW.menu)
             case "village_btn_obj":
             case "city_btn_obj":
             case "stronghold_btn_obj":
+            case "mine_btn_obj":
             {
                 if(global.SELECTED_HEX)
                 {
@@ -171,6 +183,12 @@ else if(global.GAME_STATE == GAME_FLOW.select_hex)
             break;
             
             case BUILD_TYPE.stronghold:
+            {
+                global.STOCK[STOCK_TYPE.gold] -= global.MAT_REQUIRED[BUILD_TYPE.stronghold];
+            }
+            break;
+            
+            case BUILD_TYPE.mine:
             {
                 global.STOCK[STOCK_TYPE.gold] -= global.MAT_REQUIRED[BUILD_TYPE.stronghold];
             }

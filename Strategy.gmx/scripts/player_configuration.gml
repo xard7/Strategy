@@ -16,14 +16,17 @@ global.STOCK[STOCK_TYPE.military] = 0;
 global.TIME_REQUIRED[BUILD_TYPE.village] = 1;
 global.TIME_REQUIRED[BUILD_TYPE.city] = 3;
 global.TIME_REQUIRED[BUILD_TYPE.stronghold] = 3;
-global.TIME_REQUIRED[BUILD_TYPE.stronghold] = 3;
+global.TIME_REQUIRED[BUILD_TYPE.mine] = 1;
 
+// materaly potrzebne do zbudowania
 global.MAT_REQUIRED[BUILD_TYPE.village] = 1;
 global.MAT_REQUIRED[BUILD_TYPE.city] = 3;
 global.MAT_REQUIRED[BUILD_TYPE.stronghold] = 5;
+global.MAT_REQUIRED[BUILD_TYPE.mine] = 3;
 
-global.PROCUDTION[BUILD_TYPE.village] = pack_production_data(1, 0);
-global.PROCUDTION[BUILD_TYPE.city] = pack_production_data(1, 1);
-global.PROCUDTION[BUILD_TYPE.mine] = pack_production_data(2, 2);
-global.PROCUDTION[BUILD_TYPE.stronghold] = pack_production_data(1, 1);
+// produkcja
+global.PROCUDTION[BUILD_TYPE.village] = pack_production_data(1, 0); // daje food
+global.PROCUDTION[BUILD_TYPE.city] = pack_production_data(1, 1); // zabiera food, daje gold
+global.PROCUDTION[BUILD_TYPE.stronghold] = pack_production_data(1, 1); // zabiera food, zabiera gold
+global.PROCUDTION[BUILD_TYPE.mine] = pack_production_data(1, 1);// zabiera food, daje gold
 
