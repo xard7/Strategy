@@ -80,6 +80,7 @@
       <object>objects\stronghold_obj</object>
       <object>objects\place_obj</object>
       <object>objects\city_obj</object>
+      <object>objects\mine_obj</object>
     </objects>
     <objects name="menu">
       <object>objects\menu_obj</object>

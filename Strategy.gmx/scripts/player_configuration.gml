@@ -7,12 +7,15 @@ global.BUILD_REQUEST = BUILD_TYPE.unknow;
 global.MENU_ITEMS = ds_list_create();
 global.USED_HEXS = ds_list_create();
 
+// zasoby gracza
 global.STOCK[STOCK_TYPE.food] = 0;
 global.STOCK[STOCK_TYPE.gold] = 5;
 global.STOCK[STOCK_TYPE.military] = 0;
 
+// czas potrzebny na zbudowanie obiektu
 global.TIME_REQUIRED[BUILD_TYPE.village] = 1;
 global.TIME_REQUIRED[BUILD_TYPE.city] = 3;
+global.TIME_REQUIRED[BUILD_TYPE.stronghold] = 3;
 global.TIME_REQUIRED[BUILD_TYPE.stronghold] = 3;
 
 global.MAT_REQUIRED[BUILD_TYPE.village] = 1;
