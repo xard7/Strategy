@@ -89,7 +89,7 @@
         <arguments>
           <argument>
             <kind>9</kind>
-            <script>building_create</script>
+            <script>stronghold_p1_create</script>
           </argument>
           <argument>
             <kind>0</kind>

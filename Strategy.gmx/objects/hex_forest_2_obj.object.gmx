@@ -29,7 +29,7 @@
           </argument>
           <argument>
             <kind>0</kind>
-            <string>HEX_DEPTH</string>
+            <string>BUILDING_DEPTH</string>
           </argument>
         </arguments>
       </action>

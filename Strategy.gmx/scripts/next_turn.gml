@@ -12,6 +12,8 @@ if(ds_list_size(global.MENU_ITEMS) != 0)
     ds_list_clear(global.MENU_ITEMS);
 }
 
+global.STOCK[STOCK_TYPE.military] = 0;
+
 for(var i = 0; i < ds_list_size(global.USED_HEXS); i++)
 {
     var hex_inst = global.USED_HEXS[| i];
@@ -30,26 +32,28 @@ for(var i = 0; i < ds_list_size(global.USED_HEXS); i++)
                     case BUILD_TYPE.village:
                     {
                         new_build = instance_create(hex_inst.x, hex_inst.y, village_obj); 
-                        new_build.m_production = global.PROCUDTION[BUILD_TYPE.village];
+                        new_build.m_production = global.PRODUCTION[BUILD_TYPE.village];
                     }
                     break;
                     
                     case BUILD_TYPE.city:
                     {
                         new_build = instance_create(hex_inst.x, hex_inst.y, city_obj);
-                        new_build.m_production = global.PROCUDTION[BUILD_TYPE.city];
+                        new_build.m_production = global.PRODUCTION[BUILD_TYPE.city];
                     }
                     break;
                     
                     case BUILD_TYPE.stronghold:
                     {
                         new_build = instance_create(hex_inst.x, hex_inst.y, stronghold_obj);
+                        new_build.m_production = global.PRODUCTION[BUILD_TYPE.stronghold];
                     }
                     break;
                     
                     case BUILD_TYPE.mine:
                     {
                         new_build = instance_create(hex_inst.x, hex_inst.y, mine_obj);
+                        new_build.m_production = global.PRODUCTION[BUILD_TYPE.mine];
                     }
                     break;
                 }
@@ -88,7 +92,7 @@ for(var i = 0; i < ds_list_size(global.USED_HEXS); i++)
         }
         break;
         
-        case "stronghoold_obj":
+        case "stronghold_obj":
         {
             var upack_procuction = unpack_production_data(hex_inst.m_production);
             var c_food = global.STOCK[STOCK_TYPE.food] - upack_procuction[0];
@@ -97,6 +101,7 @@ for(var i = 0; i < ds_list_size(global.USED_HEXS); i++)
             {
                 global.STOCK[STOCK_TYPE.food] = c_food;
                 global.STOCK[STOCK_TYPE.gold] = c_gold;
+                global.STOCK[STOCK_TYPE.military] += global.MILITARY_STATIONED;
             }
         }
         break;

@@ -8,8 +8,8 @@ global.MENU_ITEMS = ds_list_create();
 global.USED_HEXS = ds_list_create();
 
 // zasoby gracza
-global.STOCK[STOCK_TYPE.food] = 20;
-global.STOCK[STOCK_TYPE.gold] = 20;
+global.STOCK[STOCK_TYPE.food] = 100;
+global.STOCK[STOCK_TYPE.gold] = 100;
 global.STOCK[STOCK_TYPE.military] = 0;
 
 // czas potrzebny na zbudowanie obiektu
@@ -25,8 +25,9 @@ global.MAT_REQUIRED[BUILD_TYPE.stronghold] = 25;
 global.MAT_REQUIRED[BUILD_TYPE.mine] = 10;
 
 // produkcja
-global.PROCUDTION[BUILD_TYPE.village] = pack_production_data(5, 1); // daje food, zabiera gold
-global.PROCUDTION[BUILD_TYPE.city] = pack_production_data(5, 5); // zabiera food, daje gold
-global.PROCUDTION[BUILD_TYPE.stronghold] = pack_production_data(10, 10); // zabiera food, zabiera gold
-global.PROCUDTION[BUILD_TYPE.mine] = pack_production_data(5, 10);// zabiera food, daje gold
+global.PRODUCTION[BUILD_TYPE.village] = pack_production_data(5, 1); // daje food, zabiera gold
+global.PRODUCTION[BUILD_TYPE.city] = pack_production_data(5, 5); // zabiera food, daje gold
+global.PRODUCTION[BUILD_TYPE.mine] = pack_production_data(5, 10);// zabiera food, daje gold
+global.PRODUCTION[BUILD_TYPE.stronghold] = pack_production_data(10, 10); // zabiera food, zabiera gold
+global.MILITARY_STATIONED = 5;
 

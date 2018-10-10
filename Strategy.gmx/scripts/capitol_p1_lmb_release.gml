@@ -16,6 +16,24 @@ if(global.GAME_STATE == GAME_FLOW.ingame)
         }
         ds_list_clear(m_selected_inst);
     }
+    
+    if(global.SELECTED_HEX != noone)
+    {
+        with(global.SELECTED_HEX)
+        {
+            if(ds_list_size(m_selected_inst) != 0)
+            {
+                for(var i = 0; i < ds_list_size(m_selected_inst); i++ )
+                {
+                    var hex_inst = m_selected_inst[| i];
+                    hex_inst.m_selected = false;
+                }
+                ds_list_clear(m_selected_inst);
+            }
+        }
+        
+        global.SELECTED_HEX = noone;
+    }
 
     var menu_inst = instance_position(mouse_x, mouse_y, menu_obj);
     if(menu_inst)
@@ -33,6 +51,7 @@ if(global.GAME_STATE == GAME_FLOW.ingame)
             switch(object_get_name(building_inst.object_index))
             {
                 case "capitol_P1_obj":
+                case "stronghold_obj":
                     global.SELECTED_HEX = building_inst.id;
                     global.GAME_STATE = GAME_FLOW.menu;
                     ds_list_add(global.MENU_ITEMS, instance_create(building_inst.x, building_inst.y, build_btn_obj));
@@ -123,8 +142,9 @@ else if(global.GAME_STATE == GAME_FLOW.menu)
                     switch(object_get_name(global.SELECTED_HEX.object_index))
                     {
                         case "capitol_P1_obj":
+                        case "stronghold_obj":
                         {
-                            set_hex_selection(self);
+                            set_hex_selection(global.SELECTED_HEX);
                         }
                         break;
                         
@@ -146,7 +166,6 @@ else if(global.GAME_STATE == GAME_FLOW.menu)
     
     if(destroyMenu)
     {
-        global.SELECTED_HEX = noone;
         if(ds_list_size(global.MENU_ITEMS) != 0)
         {
             for(var i = 0; i < ds_list_size(global.MENU_ITEMS); i++ )
@@ -161,7 +180,7 @@ else if(global.GAME_STATE == GAME_FLOW.select_hex)
 {
     var hex_inst = instance_position(mouse_x, mouse_y, hex_obj);
     if(hex_inst && hex_inst.m_selected && global.BUILD_REQUEST != BUILD_TYPE.unknow)
-    {
+    {    
         hex_inst.m_type = hex_inst.m_type | MAP_TERRAIN_TYPE.build;
         var place = instance_create(hex_inst.x, hex_inst.y, place_obj);
         ds_list_add(global.USED_HEXS, place.id);
@@ -206,7 +225,24 @@ else if(global.GAME_STATE == GAME_FLOW.select_hex)
         ds_list_clear(m_selected_inst);
     }
     
-    global.SELECTED_HEX = noone;
+    if(global.SELECTED_HEX != noone)
+    {
+        with(global.SELECTED_HEX)
+        {
+            if(ds_list_size(m_selected_inst) != 0)
+            {
+                for(var i = 0; i < ds_list_size(m_selected_inst); i++ )
+                {
+                    var hex_inst = m_selected_inst[| i];
+                    hex_inst.m_selected = false;
+                }
+                ds_list_clear(m_selected_inst);
+            }
+        }
+        
+        global.SELECTED_HEX = noone;
+    }
+    
     global.GAME_STATE = GAME_FLOW.ingame;
 }
 else if(global.GAME_STATE == GAME_FLOW.waiting_turn)

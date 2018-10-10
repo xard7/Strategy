@@ -60,6 +60,7 @@
       <script>scripts\building_create.gml</script>
       <script>scripts\place_create.gml</script>
       <script>scripts\capitol_p1_create.gml</script>
+      <script>scripts\stronghold_p1_create.gml</script>
     </scripts>
     <scripts name="interactions">
       <script>scripts\capitol_p1_lmb_release.gml</script>
