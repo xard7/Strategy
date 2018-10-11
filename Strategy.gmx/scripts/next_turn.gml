@@ -112,7 +112,10 @@ for(var i = 0; i < ds_list_size(global.USED_HEXS); i++)
             if(c_food >= 0)
             {
                 global.STOCK[STOCK_TYPE.food] = c_food;
-                global.STOCK[STOCK_TYPE.gold] += upack_procuction[1];
+                if(check_neighbor_hex(hex_inst.x, hex_inst.y, MAP_TERRAIN_TYPE.rock))
+                {
+                    global.STOCK[STOCK_TYPE.gold] += upack_procuction[1];
+                }
             }
         }
         break;
