@@ -25,6 +25,7 @@ global.MAT_REQUIRED[BUILD_TYPE.stronghold] = 25;
 global.MAT_REQUIRED[BUILD_TYPE.mine] = 10;
 
 // produkcja
+global.PRODUCTION[BUILD_TYPE.capitol] = pack_production_data(1, 1); // daje food, daje gold
 global.PRODUCTION[BUILD_TYPE.village] = pack_production_data(5, 1); // daje food, zabiera gold
 global.PRODUCTION[BUILD_TYPE.city] = pack_production_data(5, 5); // zabiera food, daje gold
 global.PRODUCTION[BUILD_TYPE.mine] = pack_production_data(5, 10);// zabiera food, daje gold

@@ -2,7 +2,24 @@
 
 global.GAME_STATE = GAME_FLOW.waiting_turn;
 
-global.SELECTED_HEX = noone;
+if(global.SELECTED_HEX != noone)
+{
+    with(global.SELECTED_HEX)
+    {
+        if(ds_list_size(m_selected_inst) != 0)
+        {
+            for(var i = 0; i < ds_list_size(m_selected_inst); i++ )
+            {
+                var hex_inst = m_selected_inst[| i];
+                hex_inst.m_selected = false;
+            }
+            ds_list_clear(m_selected_inst);
+        }
+    }
+    global.SELECTED_HEX = noone;
+}
+
+
 if(ds_list_size(global.MENU_ITEMS) != 0)
 {
     for(var i = 0; i < ds_list_size(global.MENU_ITEMS); i++ )
@@ -64,6 +81,14 @@ for(var i = 0; i < ds_list_size(global.USED_HEXS); i++)
                     instance_destroy(hex_inst);
                 }
             }
+        }
+        break;
+        
+        case "capitol_P1_obj":
+        {
+            var upack_procuction = unpack_production_data(hex_inst.m_production);
+            global.STOCK[STOCK_TYPE.food] += upack_procuction[0];
+            global.STOCK[STOCK_TYPE.gold] += upack_procuction[1];
         }
         break;
         
