@@ -41,6 +41,7 @@
     <scripts name="functions">
       <script>scripts\add_hex_to_grid.gml</script>
       <script>scripts\set_object_depth.gml</script>
+      <script>scripts\set_object_scale.gml</script>
       <script>scripts\get_hex_xy.gml</script>
       <script>scripts\hex_precreate.gml</script>
       <script>scripts\hex_set_select.gml</script>
@@ -105,8 +106,8 @@
     </objects>
   </objects>
   <rooms name="rooms">
-    <room>rooms\econony_test</room>
     <room>rooms\map_test</room>
+    <room>rooms\econony_test</room>
   </rooms>
   <constants number="4">
     <constant name="HEX_DEPTH">1000</constant>

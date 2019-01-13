@@ -1,7 +1,7 @@
 /// map_configuration()
 
-global.HEX_X_OFFSET = 68;
-global.HEX_Y_OFFSET = 18; // pelny offset to HEX_Y_OFFSET * 2
+global.HEX_X_OFFSET = 246;
+global.HEX_Y_OFFSET = 85; // pelny offset to HEX_Y_OFFSET * 2
 
 var min_x = room_height; var min_y = room_width;
 var max_x = 0; var max_y = 0;
