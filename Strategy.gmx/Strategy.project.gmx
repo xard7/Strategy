@@ -13,6 +13,7 @@
       <sprite>sprites\hex_rock_spr</sprite>
       <sprite>sprites\hex_forest_1_spr</sprite>
       <sprite>sprites\hex_forest_2_spr</sprite>
+      <sprite>sprites\hex_select</sprite>
     </sprites>
     <sprites name="building">
       <sprite>sprites\capitol_spr</sprite>
@@ -88,11 +89,11 @@
       <object>objects\capitol_P1_obj</object>
       <object>objects\capitol_P2_obj</object>
       <object>objects\village_obj</object>
-      <object>objects\stronghold_obj</object>
-      <object>objects\place_obj</object>
       <object>objects\city_obj</object>
-      <object>objects\mine_obj</object>
       <object>objects\tower_obj</object>
+      <object>objects\stronghold_obj</object>
+      <object>objects\mine_obj</object>
+      <object>objects\place_obj</object>
     </objects>
     <objects name="menu">
       <object>objects\menu_obj</object>

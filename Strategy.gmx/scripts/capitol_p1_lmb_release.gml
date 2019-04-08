@@ -5,8 +5,10 @@ show_debug_message("packed data: " + string(packed_data));
 var unpacked_data = unpack_production_data(packed_data);
 show_debug_message("unpacked data: " + string(unpacked_data[0]) + ", " + string(unpacked_data[1]));
 
+// stan wyjsciowy
 if(global.GAME_STATE == GAME_FLOW.ingame)
 {
+    // czysci zaznaczone heksy
     if(ds_list_size(m_selected_inst) != 0)
     {
         for(var i = 0; i < ds_list_size(m_selected_inst); i++ )

@@ -12,9 +12,9 @@ var l_selected = argument[1];
 
 with(l_hex)
 {
-    var is_grass = (m_type & MAP_TERRAIN_TYPE.grass);
-    var not_grass = ~MAP_TERRAIN_TYPE.grass;
-    if( (m_type & not_grass) == 0 && is_grass != 0)
+    var is_grass_sand = (m_type & MAP_TERRAIN_TYPE.grass) + (m_type & MAP_TERRAIN_TYPE.sand);
+    var not_grass_sand = ~(MAP_TERRAIN_TYPE.grass | MAP_TERRAIN_TYPE.sand);
+    if( (m_type & not_grass_sand) == 0 && is_grass_sand != 0)
     {
         m_selected = l_selected;
         ret = true;

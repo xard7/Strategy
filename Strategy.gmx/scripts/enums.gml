@@ -18,7 +18,7 @@ enum STOCK_TYPE
 {
     food,
     gold,
-    military,
+    military, // niepotrzebne
 };
 
 enum GAME_FLOW
@@ -34,10 +34,11 @@ enum BUILD_TYPE
     capitol,
     village,
     city,
-    mine,
-    sawmill,
-    port,
+    mine, // usun
+    sawmill, // usun
+    port, // usun
     stronghold,
+    tower,
     unknow,
 };
 
