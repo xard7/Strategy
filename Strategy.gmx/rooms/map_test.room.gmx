@@ -69,22 +69,22 @@
     <instance objName="hex_grass_obj" x="738" y="1020" name="inst_68744021" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="hex_grass_obj" x="738" y="1190" name="inst_968F07A9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="hex_grass_obj" x="984" y="1105" name="inst_BA181FBA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="hex_grass_obj" x="1230" y="850" name="inst_5D9F8C02" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="hex_water_obj" x="246" y="680" name="inst_01221C50" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="hex_water_obj" x="492" y="765" name="inst_F3A720D1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="hex_water_obj" x="492" y="935" name="inst_7DBC8AFD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="hex_water_obj" x="492" y="1105" name="inst_F31F3A1D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="hex_water_obj" x="492" y="1275" name="inst_01021BC3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="hex_water_obj" x="738" y="1360" name="inst_33042C0F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="hex_water_obj" x="246" y="510" name="inst_8B1E4CFB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="hex_water_obj" x="246" y="340" name="inst_2DF591FA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="hex_grass_obj" x="1476" y="1105" name="inst_5D9F8C02" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="hex_water_obj" x="0" y="595" name="inst_01221C50" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="hex_water_obj" x="0" y="935" name="inst_F3A720D1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="hex_water_obj" x="0" y="1105" name="inst_7DBC8AFD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="hex_water_obj" x="0" y="1275" name="inst_F31F3A1D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="hex_water_obj" x="492" y="1785" name="inst_01021BC3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="hex_water_obj" x="492" y="1615" name="inst_33042C0F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="hex_water_obj" x="0" y="425" name="inst_8B1E4CFB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="hex_water_obj" x="0" y="255" name="inst_2DF591FA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="hex_water_obj" x="492" y="255" name="inst_705A65CF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="hex_water_obj" x="738" y="170" name="inst_7F79759D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="hex_water_obj" x="984" y="255" name="inst_0F776635" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="hex_water_obj" x="1230" y="340" name="inst_D3435CB8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="hex_water_obj" x="1476" y="425" name="inst_7643CAC9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="hex_water_obj" x="1722" y="340" name="inst_2241B56F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="hex_water_obj" x="1968" y="425" name="inst_7DCCC411" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="hex_water_obj" x="984" y="85" name="inst_0F776635" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="hex_water_obj" x="1230" y="0" name="inst_D3435CB8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="hex_water_obj" x="1476" y="85" name="inst_7643CAC9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="hex_water_obj" x="1722" y="170" name="inst_2241B56F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="hex_water_obj" x="1968" y="255" name="inst_7DCCC411" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="hex_sand_obj" x="984" y="1275" name="inst_38A5F5C5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="hex_sand_obj" x="1230" y="1190" name="inst_E46608CE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="hex_sand_obj" x="1230" y="1020" name="inst_6FAE84E0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -92,21 +92,21 @@
     <instance objName="hex_sand_obj" x="1722" y="850" name="inst_8685249C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="hex_sand_obj" x="1968" y="595" name="inst_0AD2EA0E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="hex_sand_obj" x="1968" y="765" name="inst_7ED2FA0F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="hex_water_obj" x="984" y="1445" name="inst_BA371378" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="hex_water_obj" x="1230" y="1360" name="inst_F7943EB2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="hex_water_obj" x="1230" y="1530" name="inst_102213B4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="hex_water_obj" x="1476" y="1275" name="inst_FB876679" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="hex_water_obj" x="1476" y="1105" name="inst_7FF2C1FE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="hex_water_obj" x="1722" y="1020" name="inst_5C22C9AA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="hex_water_obj" x="1968" y="935" name="inst_617ED91E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="hex_water_obj" x="2214" y="850" name="inst_345CB67E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="hex_water_obj" x="2214" y="680" name="inst_6437C51A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="hex_water_obj" x="0" y="1445" name="inst_BA371378" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="hex_water_obj" x="1230" y="1870" name="inst_F7943EB2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="hex_water_obj" x="1476" y="1955" name="inst_102213B4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="hex_water_obj" x="984" y="1785" name="inst_FB876679" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="hex_water_obj" x="738" y="1700" name="inst_7FF2C1FE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="hex_water_obj" x="2214" y="340" name="inst_5C22C9AA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="hex_water_obj" x="2460" y="425" name="inst_617ED91E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="hex_water_obj" x="2706" y="510" name="inst_345CB67E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="hex_water_obj" x="2460" y="255" name="inst_6437C51A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="hex_water_obj" x="2214" y="510" name="inst_5BA3D64C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="hex_water_obj" x="2460" y="765" name="inst_3075BE52" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="hex_water_obj" x="2460" y="935" name="inst_E45545AA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="hex_sand_obj" x="1476" y="1445" name="inst_7C0E3FFD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="hex_sand_obj" x="1722" y="1360" name="inst_BA156D96" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="hex_sand_obj" x="1722" y="1190" name="inst_63359078" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="hex_sand_obj" x="1722" y="1020" name="inst_63359078" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="hex_sand_obj" x="1968" y="1105" name="inst_8468670F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="hex_sand_obj" x="2214" y="1020" name="inst_0C16F253" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="hex_sand_obj" x="2460" y="1105" name="inst_3E397DB8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -147,8 +147,7 @@
     <instance objName="hex_grass_obj" x="3444" y="1445" name="inst_E62ABECD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="hex_grass_obj" x="3444" y="1615" name="inst_73842E84" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="hex_grass_obj" x="3198" y="1870" name="inst_7818FD09" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="hex_grass_obj" x="738" y="850" name="inst_F4D1A3F7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="hex_water_obj" x="1230" y="1700" name="inst_FA81908F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="hex_water_obj" x="1230" y="2040" name="inst_FA81908F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="hex_water_obj" x="1476" y="1785" name="inst_5A1E4AD8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="hex_water_obj" x="1722" y="1870" name="inst_57CF2F8B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="hex_water_obj" x="1968" y="1785" name="inst_C667E347" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -170,18 +169,48 @@
     <instance objName="hex_water_obj" x="2952" y="765" name="inst_2A05DF66" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="hex_water_obj" x="2706" y="680" name="inst_588FAE1E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="hex_water_obj" x="2460" y="595" name="inst_A2C35B19" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="hex_water_obj" x="984" y="1615" name="inst_1FCF471B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="hex_water_obj" x="738" y="1530" name="inst_9FF3088B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="hex_water_obj" x="492" y="1445" name="inst_B96D4BF4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="hex_water_obj" x="246" y="850" name="inst_5EC4D972" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="hex_water_obj" x="984" y="1955" name="inst_1FCF471B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="hex_water_obj" x="738" y="1870" name="inst_9FF3088B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="hex_water_obj" x="492" y="1955" name="inst_B96D4BF4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="hex_water_obj" x="0" y="765" name="inst_5EC4D972" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="hex_water_obj" x="3690" y="1020" name="inst_84ECDE37" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="hex_water_obj" x="3690" y="1870" name="inst_EB6F3844" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="capitol_P1_obj" x="984" y="595" name="inst_43CF3314" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="hex_grass_obj" x="1230" y="850" name="inst_8F6EC993" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="hex_grass_obj" x="1476" y="1275" name="inst_F232E851" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="hex_grass_obj" x="1230" y="1360" name="inst_F4F733A9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="hex_grass_obj" x="492" y="1105" name="inst_2ABE9801" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="hex_grass_obj" x="738" y="1360" name="inst_C82B8C06" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="hex_grass_obj" x="984" y="255" name="inst_75A87344" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="hex_grass_obj" x="1230" y="340" name="inst_FEABAC15" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="hex_grass_obj" x="1476" y="425" name="inst_D6342027" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="hex_grass_obj" x="738" y="850" name="inst_8DF69231" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="hex_grass_obj" x="492" y="765" name="inst_64608906" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="hex_grass_obj" x="492" y="935" name="inst_74BE40D3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="hex_grass_obj" x="1230" y="170" name="inst_36BD1AE0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="hex_grass_obj" x="1476" y="255" name="inst_94C361FB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="hex_grass_obj" x="1722" y="340" name="inst_3C776A49" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="hex_grass_obj" x="1968" y="425" name="inst_03437D14" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="hex_grass_obj" x="1722" y="1190" name="inst_C150ABE7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="hex_grass_obj" x="1968" y="935" name="inst_B9C1A574" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="hex_grass_obj" x="2214" y="850" name="inst_B6EF22FE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="hex_grass_obj" x="2214" y="680" name="inst_BD09B3DC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="hex_grass_obj" x="984" y="1445" name="inst_AE502B4D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="hex_grass_obj" x="1230" y="1530" name="inst_FE2C9947" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="hex_grass_obj" x="738" y="1530" name="inst_629ABF3F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="hex_grass_obj" x="984" y="1615" name="inst_9A8991CC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="hex_grass_obj" x="1230" y="1700" name="inst_24A8ED37" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="hex_grass_obj" x="492" y="1275" name="inst_29343699" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="hex_grass_obj" x="492" y="1445" name="inst_765569F9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="hex_grass_obj" x="246" y="340" name="inst_8025241A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="hex_grass_obj" x="246" y="510" name="inst_4B634C6F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="hex_grass_obj" x="246" y="1530" name="inst_94AF2163" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="hex_grass_obj" x="246" y="1360" name="inst_CD3325B0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="hex_grass_obj" x="246" y="1190" name="inst_F3971120" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="hex_grass_obj" x="246" y="1020" name="inst_59E311A1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="hex_grass_obj" x="246" y="850" name="inst_9C0A1C68" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="hex_grass_obj" x="246" y="680" name="inst_2E40E3C1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="capitol_P1_obj" x="1230" y="850" name="inst_43CF3314" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="next_turn_btn_obj" x="1722" y="2465" name="inst_AA4B3111" locked="0" code="" scaleX="2" scaleY="2" colour="4294967295" rotation="0"/>
-    <instance objName="hex_rock_obj" x="1230" y="680" name="inst_F3EC87E0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="hex_rock_obj" x="1476" y="765" name="inst_0FADE12E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="hex_rock_obj" x="1230" y="510" name="inst_1A15D16A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="hex_rock_obj" x="984" y="425" name="inst_2306144E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

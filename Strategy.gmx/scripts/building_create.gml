@@ -1,6 +1,6 @@
 /// building_create()
 
-hex_precreate();
+hex_create();
 
 m_production = 0;
 

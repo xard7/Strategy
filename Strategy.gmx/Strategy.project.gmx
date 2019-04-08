@@ -45,9 +45,9 @@
       <script>scripts\set_object_depth.gml</script>
       <script>scripts\set_object_scale.gml</script>
       <script>scripts\get_hex_xy.gml</script>
-      <script>scripts\hex_precreate.gml</script>
       <script>scripts\hex_set_select.gml</script>
       <script>scripts\set_hex_selection.gml</script>
+      <script>scripts\add_to_player_fields.gml</script>
       <script>scripts\check_neighbor_hex.gml</script>
       <script>scripts\get_neighbor_coods.gml</script>
       <script>scripts\pack_production_data.gml</script>
@@ -58,6 +58,8 @@
       <script>scripts\map_configuration.gml</script>
       <script>scripts\player_configuration.gml</script>
       <script>scripts\room_ended.gml</script>
+      <script>scripts\hex_create.gml</script>
+      <script>scripts\hex_destroy.gml</script>
     </scripts>
     <scripts name="building">
       <script>scripts\building_create.gml</script>
@@ -117,7 +119,7 @@
     <constant name="HEX_DEPTH">1000</constant>
     <constant name="BUILDING_DEPTH">900</constant>
     <constant name="MENU_DEPTH">10</constant>
-    <constant name="DEBUG_MODE">false</constant>
+    <constant name="DEBUG_MODE">true</constant>
   </constants>
   <help>
     <rtf>help.rtf</rtf>
