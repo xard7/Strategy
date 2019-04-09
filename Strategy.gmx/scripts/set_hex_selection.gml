@@ -9,6 +9,75 @@ if(argument_count == 2)
 
 with(obj)
 {
+    var l_x = obj.x - global.HEX_X_OFFSET;
+    var l_y = obj.y - global.HEX_Y_OFFSET;
+    var hex_inst = get_hex_xy(l_x, l_y, hex_obj);
+    if(hex_inst != noone && ds_list_find_index(obj.m_selected_inst, hex_inst) == -1)
+    {
+        if(check_neighbor_hex(l_x, l_y, check) && hex_set_select(hex_inst, true))
+        {
+            ds_list_add(obj.m_selected_inst, hex_inst);
+        }
+    }
+    
+    l_x = obj.x;
+    l_y = obj.y - (global.HEX_Y_OFFSET * 2);
+    hex_inst = get_hex_xy(l_x, l_y, hex_obj);
+    if(hex_inst != noone && ds_list_find_index(obj.m_selected_inst, hex_inst) == -1)
+    {
+        if(check_neighbor_hex(l_x, l_y, check) && hex_set_select(hex_inst, true))
+        {
+            ds_list_add(obj.m_selected_inst, hex_inst);
+        }
+    }
+    
+    l_x = obj.x + global.HEX_X_OFFSET;
+    l_y = obj.y - global.HEX_Y_OFFSET;
+    hex_inst = get_hex_xy(l_x, l_y, hex_obj);
+    if(hex_inst != noone && ds_list_find_index(obj.m_selected_inst, hex_inst) == -1)
+    {
+        if(check_neighbor_hex(l_x, l_y, check) && hex_set_select(hex_inst, true))
+        {
+            ds_list_add(obj.m_selected_inst, hex_inst);
+        }
+    }
+    
+    l_x = obj.x - global.HEX_X_OFFSE;
+    l_y = obj.y + global.HEX_Y_OFFSET;
+    hex_inst = get_hex_xy(l_x, l_y, hex_obj);
+    if(hex_inst != noone && ds_list_find_index(obj.m_selected_inst, hex_inst) == -1)
+    {
+        if(check_neighbor_hex(l_x, l_y, check) && hex_set_select(hex_inst, true))
+        {
+            ds_list_add(obj.m_selected_inst, hex_inst);
+        }
+    }
+    
+    l_x = obj.x;
+    l_y = obj.y + (global.HEX_Y_OFFSET * 2);
+    hex_inst = get_hex_xy(l_x, l_y, hex_obj);
+    if(hex_inst != noone && ds_list_find_index(obj.m_selected_inst, hex_inst) == -1)
+    {
+        if(check_neighbor_hex(l_x, l_y, check) && hex_set_select(hex_inst, true))
+        {
+            ds_list_add(obj.m_selected_inst, hex_inst);
+        }
+    }
+    
+    l_x = obj.x + global.HEX_X_OFFSET;
+    l_y = obj.y + global.HEX_Y_OFFSET;
+    hex_inst = get_hex_xy(l_x, l_y, hex_obj);
+    if(hex_inst != noone && ds_list_find_index(obj.m_selected_inst, hex_inst) == -1)
+    {
+        if(check_neighbor_hex(l_x, l_y, check) && hex_set_select(hex_inst, true))
+        {
+            ds_list_add(obj.m_selected_inst, hex_inst);
+        }
+    }
+}
+
+with(obj)
+{
     var hex_inst = get_hex_xy(obj.x, obj.y - (global.HEX_Y_OFFSET * 4), hex_obj);
     if(hex_inst != noone)
     {
