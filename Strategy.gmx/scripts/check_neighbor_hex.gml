@@ -11,7 +11,6 @@ var l_type = argument[2];
 
 var ret = false;
 
-
 var hex_inst = get_hex_xy(l_x - global.HEX_X_OFFSET, l_y - global.HEX_Y_OFFSET, hex_obj);
 if(hex_inst != noone && (hex_inst.m_type & l_type) != 0)
 {

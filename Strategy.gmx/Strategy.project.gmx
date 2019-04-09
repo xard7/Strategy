@@ -42,24 +42,30 @@
   <scripts name="scripts">
     <scripts name="functions">
       <script>scripts\add_hex_to_grid.gml</script>
-      <script>scripts\set_object_depth.gml</script>
-      <script>scripts\set_object_scale.gml</script>
       <script>scripts\get_hex_xy.gml</script>
       <script>scripts\hex_set_select.gml</script>
-      <script>scripts\set_hex_selection.gml</script>
-      <script>scripts\add_to_player_fields.gml</script>
       <script>scripts\check_neighbor_hex.gml</script>
+      <script>scripts\check_hex.gml</script>
       <script>scripts\get_neighbor_coods.gml</script>
       <script>scripts\pack_production_data.gml</script>
       <script>scripts\unpack_production_data.gml</script>
+      <script>scripts\get_small_hex_field.gml</script>
+      <script>scripts\get_medium_hex_field.gml</script>
+      <script>scripts\get_large_hex_field.gml</script>
+      <script>scripts\set_hex_selection.gml</script>
+    </scripts>
+    <scripts name="methods">
+      <script>scripts\set_object_depth.gml</script>
+      <script>scripts\set_object_scale.gml</script>
+      <script>scripts\hex_create.gml</script>
+      <script>scripts\hex_draw.gml</script>
+      <script>scripts\hex_destroy.gml</script>
     </scripts>
     <scripts name="global">
       <script>scripts\enums.gml</script>
       <script>scripts\map_configuration.gml</script>
       <script>scripts\player_configuration.gml</script>
       <script>scripts\room_ended.gml</script>
-      <script>scripts\hex_create.gml</script>
-      <script>scripts\hex_destroy.gml</script>
     </scripts>
     <scripts name="building">
       <script>scripts\building_create.gml</script>
@@ -75,6 +81,7 @@
   </scripts>
   <shaders name="shaders">
     <shader type="GLSLES">shaders\hex_selected_sh.shader</shader>
+    <shader type="GLSLES">shaders\hex_player_sh.shader</shader>
   </shaders>
   <objects name="objects">
     <objects name="hex">

@@ -9,5 +9,5 @@ var l_x = argument[0];
 var l_y = argument[1];
 var l_obj = argument[2];
 
-return collision_point(l_x, l_y, l_obj, false, true);
+return collision_point(l_x, l_y, l_obj, false, false);
 

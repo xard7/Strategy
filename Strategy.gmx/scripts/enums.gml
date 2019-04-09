@@ -10,8 +10,10 @@ enum MAP_TERRAIN_TYPE
     rock        = 8,
     forest      = 16,
     build       = 32,
+    player_1    = 64,
+    player_2    = 128,
     
-    everything  = 63,
+    everything  = 255,
 };
 
 enum STOCK_TYPE
