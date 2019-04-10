@@ -53,6 +53,7 @@
       <script>scripts\get_medium_hex_field.gml</script>
       <script>scripts\get_large_hex_field.gml</script>
       <script>scripts\set_hex_selection.gml</script>
+      <script>scripts\convert_to_grid_location.gml</script>
     </scripts>
     <scripts name="methods">
       <script>scripts\set_object_depth.gml</script>
@@ -66,6 +67,7 @@
       <script>scripts\map_configuration.gml</script>
       <script>scripts\player_configuration.gml</script>
       <script>scripts\room_ended.gml</script>
+      <script>scripts\set_application_size.gml</script>
     </scripts>
     <scripts name="building">
       <script>scripts\building_create.gml</script>

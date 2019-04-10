@@ -11,13 +11,10 @@ if(argument_count == 3)
 with(obj)
 {
     var hex_inst = get_hex_xy(x, y, hex_obj);
-    show_debug_message("DUPA 1 " + string(hex_inst != noone));
     if(hex_inst != noone && ds_list_find_index(l_list, hex_inst) == -1)
     {
-        show_debug_message("DUPA 2");
         if(check_hex(x, y, check))
         {
-            show_debug_message("DUPA 3");
             ds_list_add(l_list, hex_inst);
         }
     }
