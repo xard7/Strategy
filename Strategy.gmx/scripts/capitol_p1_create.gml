@@ -14,8 +14,9 @@ get_large_hex_field(self, hex_list, MAP_TERRAIN_TYPE.grass | MAP_TERRAIN_TYPE.sa
     {
         with(hex_list[| i])
         {
+            m_type = m_type | MAP_TERRAIN_TYPE.player_1;
             m_carry_level = 12;
-            ds_list_add(m_fields, pId);
+            //ds_list_add(m_fields, pId);
         }
     }
 }

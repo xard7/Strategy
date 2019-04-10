@@ -10,10 +10,37 @@ if(m_selected)
     shader_reset();
 }
 
-if(m_carry_level != 0)
+if(m_carry_level > 0)
 {
-    shader_set(hex_player_sh);
-    draw_sprite(hex_select, 12, x, y);
+    var p2 = (m_type & MAP_TERRAIN_TYPE.player_2) != 0;
+    
+    if(p2)
+    {
+        shader_set(hex_players_sh);
+    }
+    else
+    {
+        shader_set(hex_player_1_sh);
+    }
+    
+    draw_sprite(hex_select, m_carry_level, x, y);
+    shader_reset();
+}
+else if(m_carry_level < 0)
+{
+    var carry_level = 12 + m_carry_level;
+    var p1 = (m_type & MAP_TERRAIN_TYPE.player_1) != 0;
+    
+    if(p1)
+    {
+        shader_set(hex_players_sh);
+    }
+    else
+    {
+        shader_set(hex_player_2_sh);
+    }
+    
+    draw_sprite(hex_select, carry_level, x, y);
     shader_reset();
 }
     
