@@ -59,8 +59,10 @@ for(var i = 0; i < instance_count; i++)
         }
         
         var grid_value = ds_grid_get(global.MAP_GRID, x_in_grid, y_in_grid);
+        var hex_id = noone;
         if(grid_value != noone)
         {
+            hex_id = grid_value;
             grid_value = grid_value.m_type;
         }
         else
@@ -68,21 +70,24 @@ for(var i = 0; i < instance_count; i++)
             grid_value = MAP_TERRAIN_TYPE.void;
         }
         
-        self.debug_value = obj_name;
+        //self.debug_value = obj_name;
         
         var dest_hex_type = MAP_TERRAIN_TYPE.void;
         switch(obj_name)
         {
             case "hex_water_obj":
                 dest_hex_type = grid_value | MAP_TERRAIN_TYPE.water;
+                hex_id = id;
             break;
             
             case "hex_grass_obj":
                 dest_hex_type = grid_value | MAP_TERRAIN_TYPE.grass;
+                hex_id = id;
             break;
             
             case "hex_sand_obj":
                 dest_hex_type = grid_value | MAP_TERRAIN_TYPE.sand;
+                hex_id = id;
             break;
             
             case "hex_rock_obj":
@@ -101,7 +106,7 @@ for(var i = 0; i < instance_count; i++)
         if(dest_hex_type != MAP_TERRAIN_TYPE.void)
         {
             m_type = dest_hex_type;
-            add_hex_to_grid(global.MAP_GRID, id, x_in_grid, y_in_grid);
+            add_hex_to_grid(global.MAP_GRID, hex_id, x_in_grid, y_in_grid);
         }
     }
 }
