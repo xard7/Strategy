@@ -1,4 +1,5 @@
 /// check_hex(x, y, type)
+// room_space
 
 if(argument_count != 3)
 {

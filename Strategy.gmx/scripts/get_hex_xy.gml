@@ -1,4 +1,5 @@
 /// get_hex_xy(x, y, obj)
+/// room space.
 
 if(argument_count != 3)
 {

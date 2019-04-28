@@ -111,3 +111,50 @@ for(var i = 0; i < instance_count; i++)
     }
 }
 
+
+// debug
+{
+    var surf_w = ds_grid_width(global.MAP_GRID);
+    var surf_h = ds_grid_height(global.MAP_GRID);
+    var surf_id = surface_create(surf_w, surf_h);
+    
+    surface_set_target(surf_id);
+    for(var _x = 0; _x < surf_w; _x++)
+    {
+        for(var _y = 0; _y < surf_h; _y++)
+        {
+            var hex_id = ds_grid_get(global.MAP_GRID, _x, _y);
+            if(hex_id != noone)
+            {
+                with(hex_id)
+                {
+                    if((m_type & MAP_TERRAIN_TYPE.water) != 0)
+                    {
+                        draw_set_colour(c_blue);
+                    }
+                    else if((m_type & MAP_TERRAIN_TYPE.grass) != 0)
+                    {
+                        draw_set_colour(c_green);
+                    }
+                    else if((m_type & MAP_TERRAIN_TYPE.sand) != 0)
+                    {
+                        draw_set_colour(c_yellow);
+                    }
+                    else
+                    {
+                        draw_set_colour(c_red);
+                    }
+                }
+            }
+            else
+            {
+                draw_set_colour(c_black);
+            }
+            draw_point(_x, _y);
+        }
+    }
+    surface_reset_target();
+    surface_save(surf_id, "surface_hex.png");
+    surface_free(surf_id);
+}
+

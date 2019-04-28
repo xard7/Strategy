@@ -1,4 +1,5 @@
 /// get_small_hex_field(obj, list, [check])
+// grid_space
 
 var obj = argument[0];
 var l_list = argument[1];
@@ -10,76 +11,110 @@ if(argument_count == 3)
 
 with(obj)
 {
-    var hex_inst = get_hex_xy(x, y, hex_obj);
+    var converted_loc = convert_to_grid_location(x, y);
+    var even = (converted_loc[0] % 2) == 0;
+    var hex_inst = ds_grid_get(global.MAP_GRID, converted_loc[0], converted_loc[1]);
     if(hex_inst != noone && ds_list_find_index(l_list, hex_inst) == -1)
     {
-        if(check_hex(x, y, check))
-        {
-            ds_list_add(l_list, hex_inst);
-        }
-    }
-
-    var l_x = x - global.HEX_X_OFFSET;
-    var l_y = y - global.HEX_Y_OFFSET;
-    hex_inst = get_hex_xy(l_x, l_y, hex_obj);
-    if(hex_inst != noone && ds_list_find_index(l_list, hex_inst) == -1)
-    {
-        if(check_hex(l_x, l_y, check))
+        if(check_hex(hex_inst.x, hex_inst.y, check))
         {
             ds_list_add(l_list, hex_inst);
         }
     }
     
-    l_x = x;
-    l_y = y - (global.HEX_Y_OFFSET * 2);
-    hex_inst = get_hex_xy(l_x, l_y, hex_obj);
+    if(even)
+    {
+        var l_x = converted_loc[0] - 1;
+        var l_y = converted_loc[1] + 1;
+        hex_inst = ds_grid_get(global.MAP_GRID, l_x, l_y);
+        if(hex_inst != noone && ds_list_find_index(l_list, hex_inst) == -1)
+        {
+            if(check_hex(hex_inst.x, hex_inst.y, check))
+            {
+                ds_list_add(l_list, hex_inst);
+            }
+        }
+    }
+    else
+    {
+        var l_x = converted_loc[0] - 1;
+        var l_y = converted_loc[1] - 1;
+        hex_inst = ds_grid_get(global.MAP_GRID, l_x, l_y);
+        if(hex_inst != noone && ds_list_find_index(l_list, hex_inst) == -1)
+        {
+            if(check_hex(hex_inst.x, hex_inst.y, check))
+            {
+                ds_list_add(l_list, hex_inst);
+            }
+        }
+    }
+    
+    l_x = converted_loc[0];
+    l_y = converted_loc[1] - 1;
+    hex_inst = ds_grid_get(global.MAP_GRID, l_x, l_y);
     if(hex_inst != noone && ds_list_find_index(l_list, hex_inst) == -1)
     {
-        if(check_hex(l_x, l_y, check))
+        if(check_hex(hex_inst.x, hex_inst.y, check))
         {
             ds_list_add(l_list, hex_inst);
         }
     }
     
-    l_x = x + global.HEX_X_OFFSET;
-    l_y = y - global.HEX_Y_OFFSET;
-    hex_inst = get_hex_xy(l_x, l_y, hex_obj);
+    if(even)
+    {
+        l_x = converted_loc[0] + 1;
+        l_y = converted_loc[1] + 1;
+        hex_inst = ds_grid_get(global.MAP_GRID, l_x, l_y);
+        if(hex_inst != noone && ds_list_find_index(l_list, hex_inst) == -1)
+        {
+            if(check_hex(hex_inst.x, hex_inst.y, check))
+            {
+                ds_list_add(l_list, hex_inst);
+            }
+        }
+    }
+    else
+    {
+        l_x = converted_loc[0] + 1;
+        l_y = converted_loc[1] - 1;
+        hex_inst = ds_grid_get(global.MAP_GRID, l_x, l_y);
+        if(hex_inst != noone && ds_list_find_index(l_list, hex_inst) == -1)
+        {
+            if(check_hex(hex_inst.x, hex_inst.y, check))
+            {
+                ds_list_add(l_list, hex_inst);
+            }
+        }
+    }
+    
+    l_x = converted_loc[0] - 1;
+    l_y = converted_loc[1];
+    hex_inst = ds_grid_get(global.MAP_GRID, l_x, l_y);
     if(hex_inst != noone && ds_list_find_index(l_list, hex_inst) == -1)
     {
-        if(check_hex(l_x, l_y, check))
+        if(check_hex(hex_inst.x, hex_inst.y, check))
         {
             ds_list_add(l_list, hex_inst);
         }
     }
     
-    l_x = x - global.HEX_X_OFFSET;
-    l_y = y + global.HEX_Y_OFFSET;
-    hex_inst = get_hex_xy(l_x, l_y, hex_obj);
+    l_x = converted_loc[0] + 1;
+    l_y = converted_loc[1];
+    hex_inst = ds_grid_get(global.MAP_GRID, l_x, l_y);
     if(hex_inst != noone && ds_list_find_index(l_list, hex_inst) == -1)
     {
-        if(check_hex(l_x, l_y, check))
+        if(check_hex(hex_inst.x, hex_inst.y, check))
         {
             ds_list_add(l_list, hex_inst);
         }
     }
     
-    l_x = x;
-    l_y = y + (global.HEX_Y_OFFSET * 2);
-    hex_inst = get_hex_xy(l_x, l_y, hex_obj);
+    l_x = converted_loc[0];
+    l_y = converted_loc[1] + 1;
+    hex_inst = ds_grid_get(global.MAP_GRID, l_x, l_y);
     if(hex_inst != noone && ds_list_find_index(l_list, hex_inst) == -1)
     {
-        if(check_hex(l_x, l_y, check))
-        {
-            ds_list_add(l_list, hex_inst);
-        }
-    }
-    
-    l_x = x + global.HEX_X_OFFSET;
-    l_y = y + global.HEX_Y_OFFSET;
-    hex_inst = get_hex_xy(l_x, l_y, hex_obj);
-    if(hex_inst != noone && ds_list_find_index(l_list, hex_inst) == -1)
-    {
-        if(check_hex(l_x, l_y, check))
+        if(check_hex(hex_inst.x, hex_inst.y, check))
         {
             ds_list_add(l_list, hex_inst);
         }

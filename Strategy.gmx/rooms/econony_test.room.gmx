@@ -51,27 +51,8 @@
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
   </views>
   <instances>
-    <instance objName="hex_grass_obj" x="246" y="850" name="inst_B7584AAD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="hex_grass_obj" x="246" y="850" name="inst_DB352DC3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="hex_grass_obj" x="492" y="935" name="inst_4B4748BC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="hex_grass_obj" x="246" y="1020" name="inst_069E430E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="hex_grass_obj" x="492" y="1105" name="inst_FE814594" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="hex_grass_obj" x="738" y="1190" name="inst_885BA250" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="hex_grass_obj" x="984" y="1275" name="inst_21BBAE61" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="hex_grass_obj" x="1230" y="1190" name="inst_4D69B378" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="hex_grass_obj" x="1476" y="1105" name="inst_96F3FF9E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="hex_grass_obj" x="1722" y="1020" name="inst_9E9BF30E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="hex_grass_obj" x="1476" y="935" name="inst_08417AF4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="hex_grass_obj" x="1722" y="850" name="inst_40D6A94E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="hex_grass_obj" x="1722" y="680" name="inst_822C90EE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="hex_grass_obj" x="1722" y="510" name="inst_C0EF9483" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="hex_grass_obj" x="1476" y="425" name="inst_498E4391" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="hex_grass_obj" x="1230" y="340" name="inst_F6DCCDAF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="hex_grass_obj" x="984" y="255" name="inst_8B581DB0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="hex_grass_obj" x="738" y="340" name="inst_2E6F913D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="hex_grass_obj" x="492" y="425" name="inst_C0BF5006" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="hex_grass_obj" x="246" y="510" name="inst_FA8DE915" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="hex_grass_obj" x="246" y="680" name="inst_58FCE25E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="hex_grass_obj" x="492" y="595" name="inst_624118A5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="hex_grass_obj" x="738" y="510" name="inst_B350006B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="hex_grass_obj" x="984" y="425" name="inst_5CC025AC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
