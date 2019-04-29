@@ -2,6 +2,7 @@
 
 global.GAME_STATE = GAME_FLOW.waiting_turn;
 
+// deprecated ***********************
 if(global.SELECTED_HEX != noone)
 {
     with(global.SELECTED_HEX)
@@ -18,6 +19,7 @@ if(global.SELECTED_HEX != noone)
     }
     global.SELECTED_HEX = noone;
 }
+// **********************************
 
 
 if(ds_list_size(global.MENU_ITEMS) != 0)
@@ -31,7 +33,41 @@ if(ds_list_size(global.MENU_ITEMS) != 0)
 
 global.STOCK[STOCK_TYPE.military] = 0;
 
-for(var i = 0; i < ds_list_size(global.USED_HEXS); i++)
+for(var i = 0; i < instance_count; i++)
+{
+    with (instance_id[i])
+    {
+        switch(object_get_name(object_index))
+        {
+            case "hex_grass_obj":
+            case "hex_sand_obj":
+            {
+                var isOwned = (m_type & (MAP_TERRAIN_TYPE.player_1 | MAP_TERRAIN_TYPE.player_2)) != 0;
+                if(isOwned)
+                {
+                    var isP1 = (m_type & MAP_TERRAIN_TYPE.player_1) != 0;
+                    
+                    if(isP1)
+                    {
+                        m_carry_level = clamp(m_carry_level + 1, -12, 12);
+                    }
+                    else
+                    {
+                        m_carry_level = clamp(m_carry_level - 1, -12, 12);
+                    }
+                }
+            }
+            break;
+            
+            default:
+            {
+            }
+            break;
+        }
+    }
+}
+
+/*for(var i = 0; i < ds_list_size(global.USED_HEXS); i++)
 {
     var hex_inst = global.USED_HEXS[| i];
     switch(object_get_name(hex_inst.object_index))
@@ -134,7 +170,7 @@ for(var i = 0; i < ds_list_size(global.USED_HEXS); i++)
         }
         break;
     }
-}
+}*/
 
 global.GAME_STATE = GAME_FLOW.ingame;
 
