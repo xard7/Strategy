@@ -86,6 +86,7 @@
     <shader type="GLSLES">shaders\hex_player_1_sh.shader</shader>
     <shader type="GLSLES">shaders\hex_players_sh.shader</shader>
     <shader type="GLSLES">shaders\hex_player_2_sh.shader</shader>
+    <shader type="GLSLES">shaders\build_player_1_sh.shader</shader>
   </shaders>
   <objects name="objects">
     <objects name="hex">
